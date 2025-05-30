@@ -3,7 +3,7 @@
 --#region Scribe
 Balatest.TestPlay {
     name = 'scribe_can_use_null',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -14,7 +14,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -27,7 +27,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -40,7 +40,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_two_playing',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -53,7 +53,7 @@ Balatest.TestPlay {
 }
 -- Balatest.TestPlay {
 --     name = 'scribe_can_use_two_joker',
---     category = 'consumables',
+--     category = {'consumables', 'scribe'},
 
 --     jokers = { 'j_joker', 'j_joker' },
 --     consumeables = { 'c_Bakery_Scribe' },
@@ -67,7 +67,7 @@ Balatest.TestPlay {
 -- }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing_joker',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker', 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -81,7 +81,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_full',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -94,7 +94,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_playing',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -110,7 +110,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing_edition',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -124,7 +124,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_playing_edition',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -141,7 +141,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_edition',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -156,7 +156,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -172,7 +172,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker_edition',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -189,7 +189,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_eternal',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -203,7 +203,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker_eternal',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_joker' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -220,7 +220,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_hologram_joker',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_hologram' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -234,7 +234,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_hologram_card',
-    category = 'consumables',
+    category = { 'consumables', 'scribe' },
 
     jokers = { 'j_hologram' },
     consumeables = { 'c_Bakery_Scribe' },
@@ -251,7 +251,7 @@ Balatest.TestPlay {
 --#region Time Machine
 Balatest.TestPlay {
     name = 'time_machine_can_use_null',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     execute = function() end,
@@ -261,7 +261,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_one',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     execute = function()
@@ -273,7 +273,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_two',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     execute = function()
@@ -285,7 +285,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_use',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     deck = { cards = { { r = '2', s = 'S' } } },
@@ -300,7 +300,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_enhanced',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     deck = { cards = { { r = '2', s = 'S', e = 'm_wild' } } },
@@ -313,7 +313,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_use_enhanced',
-    category = 'consumables',
+    category = { 'consumables', 'time_machine' },
 
     consumeables = { 'c_Bakery_TimeMachine' },
     deck = { cards = { { r = '2', s = 'S', e = 'm_wild' } } },
@@ -331,7 +331,7 @@ Balatest.TestPlay {
 --#region Astrology
 Balatest.TestPlay {
     name = 'astrology_can_use_null',
-    category = 'consumables',
+    category = { 'consumables', 'astrology' },
 
     consumeables = { 'c_Bakery_Astrology' },
     execute = function() end,
@@ -341,7 +341,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_can_use_one',
-    category = 'consumables',
+    category = { 'consumables', 'astrology' },
 
     consumeables = { 'c_Bakery_Astrology' },
     execute = function()
@@ -353,7 +353,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_one',
-    category = 'consumables',
+    category = { 'consumables', 'astrology' },
 
     consumeables = { 'c_Bakery_Astrology' },
     dollars = 0,
@@ -368,7 +368,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_two',
-    category = 'consumables',
+    category = { 'consumables', 'astrology' },
 
     consumeables = { 'c_Bakery_Astrology' },
     dollars = 0,
@@ -383,7 +383,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_two_split',
-    category = 'consumables',
+    category = { 'consumables', 'astrology' },
 
     consumeables = { 'c_Bakery_Astrology' },
     dollars = 0,

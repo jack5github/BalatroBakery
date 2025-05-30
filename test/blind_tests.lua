@@ -2,7 +2,7 @@
 
 Balatest.TestPlay {
     name = 'leader',
-    category = 'blinds',
+    category = { 'blinds', 'leader' },
 
     hands = 5,
     discards = 5,
@@ -15,7 +15,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'leader_chicot',
-    category = 'blinds',
+    category = { 'blinds', 'leader' },
 
     jokers = { 'j_chicot' },
     hands = 5,
@@ -30,7 +30,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'attrition',
-    category = 'blinds',
+    category = { 'blinds', 'attrition' },
 
     blind = 'bl_Bakery_Tsadi',
     execute = function()
@@ -42,7 +42,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'attrition_chicot',
-    category = 'blinds',
+    category = { 'blinds', 'attrition' },
 
     jokers = { 'j_chicot' },
     blind = 'bl_Bakery_Tsadi',
@@ -56,7 +56,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'solo_single',
-    category = 'blinds',
+    category = { 'blinds', 'solo' },
 
     blind = 'bl_Bakery_He',
     execute = function()
@@ -68,7 +68,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_double',
-    category = 'blinds',
+    category = { 'blinds', 'solo' },
 
     blind = 'bl_Bakery_He',
     execute = function()
@@ -80,7 +80,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_straight',
-    category = 'blinds',
+    category = { 'blinds', 'solo' },
 
     blind = 'bl_Bakery_He',
     execute = function()
@@ -92,7 +92,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_chicot',
-    category = 'blinds',
+    category = { 'blinds', 'solo' },
 
     jokers = { 'j_chicot' },
     blind = 'bl_Bakery_He',
@@ -106,7 +106,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'witch',
-    category = 'blinds',
+    category = { 'blinds', 'witch' },
 
     hand_size = 100,
     blind = 'bl_Bakery_Qof',
@@ -117,7 +117,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'witch_chicot',
-    category = 'blinds',
+    category = { 'blinds', 'witch' },
 
     hand_size = 100,
     jokers = { 'j_chicot' },
@@ -130,7 +130,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'build',
-    category = 'blinds',
+    category = { 'blinds', 'build' },
 
     blind = 'bl_Bakery_Kaf',
     execute = function()
@@ -142,7 +142,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'build_chicot',
-    category = 'blinds',
+    category = { 'blinds', 'build' },
 
     blind = 'bl_Bakery_Kaf',
     jokers = { 'j_chicot' },

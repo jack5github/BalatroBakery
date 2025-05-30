@@ -13,7 +13,7 @@ end
 --#region Palette
 Balatest.TestPlay {
     name = 'palette_normal',
-    category = 'charms',
+    category = { 'charms', 'palette' },
 
     jokers = { 'j_droll' },
     execute = function()
@@ -26,7 +26,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'palette_weird',
-    category = 'charms',
+    category = { 'charms', 'palette' },
 
     jokers = { 'j_droll' },
     execute = function()
@@ -39,7 +39,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'palette_unequipped',
-    category = 'charms',
+    category = { 'charms', 'palette' },
 
     jokers = { 'j_droll' },
     execute = function()
@@ -56,7 +56,7 @@ Balatest.TestPlay {
 --#region Anaglyph Lens
 Balatest.TestPlay {
     name = 'anaglyph_lens_one',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_AnaglyphLens'
@@ -70,7 +70,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_stone',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S', e = 'm_stone' } } },
     execute = function()
@@ -85,7 +85,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_four',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_AnaglyphLens'
@@ -99,7 +99,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_four_plus_one',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_AnaglyphLens'
@@ -113,7 +113,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_five',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'H' }, { r = '2', s = 'C' }, { r = '2', s = 'D' } } },
     execute = function()
@@ -128,7 +128,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_four_plus_one',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '8', s = 'C' } } },
     execute = function()
@@ -143,7 +143,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_four_plus_one_alt',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '8', s = 'S' } } },
     execute = function()
@@ -158,7 +158,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_four_plus_one_alt2',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '8', s = 'C', e = 'm_stone' } } },
     execute = function()
@@ -173,7 +173,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_five',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' } } },
     execute = function()
@@ -188,7 +188,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_three_pair',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '4', s = 'C' }, { r = '4', s = 'D' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -203,7 +203,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_three_pair',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '4', s = 'S' }, { r = '4', s = 'S' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -218,7 +218,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_three_pair_alt',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '4', s = 'S' }, { r = '4', s = 'D' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -233,7 +233,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_two_triplets',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'D' }, { r = '9', s = 'D' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -248,7 +248,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_two_triplets',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '9', s = 'D' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -263,7 +263,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_mansion',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -278,7 +278,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_house',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -293,7 +293,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_house_plus_one',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '3', s = 'D' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -308,7 +308,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anaglyph_lens_flush_house_plus_one_alt',
-    category = 'charms',
+    category = { 'charms', 'anaglyph lens' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '3', s = 'D', e = 'm_stone' }, { r = '9', s = 'S' }, { r = '9', s = 'S' } } },
     execute = function()
@@ -326,7 +326,7 @@ Balatest.TestPlay {
 --#region Pedigree
 Balatest.TestPlay {
     name = 'pedigree_normal',
-    category = 'charms',
+    category = { 'charms', 'pedigree' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Pedigree'
@@ -340,7 +340,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'pedigree_weird',
-    category = 'charms',
+    category = { 'charms', 'pedigree' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Pedigree'
@@ -354,7 +354,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'pedigree_stuffed',
-    category = 'charms',
+    category = { 'charms', 'pedigree' },
 
     deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'C' }, { r = '8', s = 'C' }, { r = '8', s = 'C' } } },
     execute = function()
@@ -369,7 +369,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'pedigree_stuffed_house',
-    category = 'charms',
+    category = { 'charms', 'pedigree' },
 
     deck = { cards = { { r = '2', s = 'S', e = 'm_wild' }, { r = '2', s = 'S', e = 'm_wild' }, { r = '2', s = 'C' }, { r = '8', s = 'C' }, { r = '8', s = 'C' } } },
     execute = function()
@@ -387,7 +387,7 @@ Balatest.TestPlay {
 --#region Epitaph
 Balatest.TestPlay {
     name = 'epitaph_one',
-    category = 'charms',
+    category = { 'charms', 'epitaph' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Epitaph'
@@ -399,7 +399,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'epitaph_four',
-    category = 'charms',
+    category = { 'charms', 'epitaph' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Epitaph'
@@ -411,7 +411,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'epitaph_unequipped',
-    category = 'charms',
+    category = { 'charms', 'epitaph' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Epitaph'
@@ -427,7 +427,7 @@ Balatest.TestPlay {
 --#region Rune
 Balatest.TestPlay {
     name = 'rune_can_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'rune' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Rune'
@@ -440,7 +440,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'rune_cant_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'rune' },
 
     discards = 0,
     execute = function()
@@ -454,7 +454,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'rune_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'rune' },
 
     hand_size = 8,
     execute = function()
@@ -468,7 +468,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'rune_discard_zero_grat',
-    category = 'charms',
+    category = { 'charms', 'rune' },
 
     jokers = { 'j_delayed_grat' },
     dollars = 8,
@@ -488,7 +488,7 @@ Balatest.TestPlay {
 --#region Obsession
 Balatest.TestPlay {
     name = 'obsession_can_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'obsession' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Obsession'
@@ -501,7 +501,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'obsession_cant_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'obsession' },
 
     discards = 0,
     execute = function()
@@ -515,7 +515,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'obsession_discard_zero',
-    category = 'charms',
+    category = { 'charms', 'obsession' },
 
     dollars = 8,
     execute = function()
@@ -529,7 +529,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'obsession_discard_zero_grat',
-    category = 'charms',
+    category = { 'charms', 'obsession' },
 
     jokers = { 'j_delayed_grat' },
     dollars = 8,
@@ -549,7 +549,7 @@ Balatest.TestPlay {
 --#region Introversion
 Balatest.TestPlay {
     name = 'introversion_equip',
-    category = 'charms',
+    category = { 'charms', 'introversion' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Introversion'
@@ -560,7 +560,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'introversion_unequip',
-    category = 'charms',
+    category = { 'charms', 'introversion' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Introversion'
@@ -575,7 +575,7 @@ Balatest.TestPlay {
 --#region Extroversion
 Balatest.TestPlay {
     name = 'extroversion_equip',
-    category = 'charms',
+    category = { 'charms', 'extroversion' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Extroversion'
@@ -587,7 +587,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'extroversion_unequip',
-    category = 'charms',
+    category = { 'charms', 'extroversion' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Extroversion'
@@ -603,7 +603,7 @@ Balatest.TestPlay {
 --#region Coin
 Balatest.TestPlay {
     name = 'coin_interest',
-    category = 'charms',
+    category = { 'charms', 'coin' },
 
     dollars = 10,
     execute = function()
@@ -618,7 +618,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_interest_maxed',
-    category = 'charms',
+    category = { 'charms', 'coin' },
 
     dollars = 38,
     execute = function()
@@ -633,7 +633,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_interest_moon',
-    category = 'charms',
+    category = { 'charms', 'coin' },
 
     jokers = { 'j_to_the_moon' },
     dollars = 18,
@@ -649,7 +649,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_interest_seed_money',
-    category = 'charms',
+    category = { 'charms', 'coin' },
 
     vouchers = { 'v_seed_money' },
     dollars = 28,
@@ -668,7 +668,7 @@ Balatest.TestPlay {
 --#region Void
 Balatest.TestPlay {
     name = 'void_equip',
-    category = 'charms',
+    category = { 'charms', 'void' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Void'
@@ -679,7 +679,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'void_unequip',
-    category = 'charms',
+    category = { 'charms', 'void' },
 
     execute = function()
         equip 'BakeryCharm_Bakery_Void'

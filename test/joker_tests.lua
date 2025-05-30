@@ -3,7 +3,7 @@
 --#region Tarmogoyf
 Balatest.TestPlay {
     name = 'tarmogoyf_null',
-    category = 'tarmogoyf',
+    category = { 'jokers', 'tarmogoyf' },
 
     jokers = { 'j_Bakery_Tarmogoyf' },
     execute = function()
@@ -15,7 +15,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded',
-    category = 'tarmogoyf',
+    category = { 'jokers', 'tarmogoyf' },
 
     jokers = { 'j_Bakery_Tarmogoyf' },
     execute = function()
@@ -28,7 +28,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded_duplicates',
-    category = 'tarmogoyf',
+    category = { 'jokers', 'tarmogoyf' },
 
     jokers = { 'j_Bakery_Tarmogoyf' },
     execute = function()
@@ -41,7 +41,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded_multiple',
-    category = 'tarmogoyf',
+    category = { 'jokers', 'tarmogoyf' },
 
     jokers = { 'j_Bakery_Tarmogoyf' },
     execute = function()
@@ -55,7 +55,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_reset',
-    category = 'tarmogoyf',
+    category = { 'jokers', 'tarmogoyf' },
 
     jokers = { 'j_Bakery_Tarmogoyf' },
     execute = function()
@@ -72,7 +72,7 @@ Balatest.TestPlay {
 --#region Auctioneer
 Balatest.TestPlay {
     name = 'auctioneer_none',
-    category = 'auctioneer',
+    category = { 'jokers', 'auctioneer' },
 
     jokers = { 'j_Bakery_Auctioneer' },
     dollars = 0,
@@ -84,7 +84,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_j_joker',
-    category = 'auctioneer',
+    category = { 'jokers', 'auctioneer' },
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker' },
     dollars = 0,
@@ -96,7 +96,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_j_caino',
-    category = 'auctioneer',
+    category = { 'jokers', 'auctioneer' },
 
     jokers = { 'j_Bakery_Auctioneer', 'j_caino' },
     dollars = 0,
@@ -108,7 +108,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_twice_half',
-    category = 'auctioneer',
+    category = { 'jokers', 'auctioneer' },
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker', 'j_joker' },
     dollars = 0,
@@ -121,7 +121,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_twice',
-    category = 'auctioneer',
+    category = { 'jokers', 'auctioneer' },
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker', 'j_joker' },
     dollars = 0,
@@ -138,7 +138,7 @@ Balatest.TestPlay {
 --#region Don
 Balatest.TestPlay {
     name = 'don',
-    category = 'don',
+    category = { 'jokers', 'don' },
 
     jokers = { 'j_Bakery_Don' },
     dollars = 4,
@@ -152,7 +152,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'don_debt',
-    category = 'don',
+    category = { 'jokers', 'don' },
 
     jokers = { 'j_Bakery_Don' },
     dollars = 1,
@@ -166,7 +166,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'don_deep_debt',
-    category = 'don',
+    category = { 'jokers', 'don' },
 
     jokers = { 'j_Bakery_Don' },
     dollars = -10,
@@ -183,7 +183,7 @@ Balatest.TestPlay {
 --#region Werewolf
 Balatest.TestPlay {
     name = 'werewolf_front',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -195,7 +195,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_front_flips',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -207,7 +207,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_front_does_not_flip',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -220,7 +220,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -233,7 +233,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_does_not_flip_0',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -246,7 +246,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_does_not_flip_1',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -260,7 +260,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_flips',
-    category = 'werewolf',
+    category = { 'jokers', 'werewolf' },
 
     jokers = { 'j_Bakery_Werewolf' },
     execute = function()
@@ -278,7 +278,7 @@ Balatest.TestPlay {
 --#region Spinner
 Balatest.TestPlay {
     name = 'spinner_0',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -291,7 +291,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_1',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -304,7 +304,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_2',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -317,7 +317,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_3',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     dollars = 0,
@@ -332,7 +332,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_0',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -345,7 +345,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_1',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -358,7 +358,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_2',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -371,7 +371,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_3',
-    category = 'spinner',
+    category = { 'jokers', 'spinner' },
 
     jokers = { 'j_Bakery_Spinner' },
     execute = function()
@@ -387,7 +387,7 @@ Balatest.TestPlay {
 --#region Proxy
 Balatest.TestPlay {
     name = 'proxy_null',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     execute = function()
@@ -399,7 +399,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_judgement',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     consumeables = { 'c_judgement' },
@@ -417,7 +417,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_with_timestamp',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy', 'j_joker' },
     execute = function()
@@ -432,7 +432,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_pack',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     execute = function()
@@ -455,7 +455,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_shop',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     dollars = 2,
@@ -479,7 +479,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_skipped',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     dollars = 6,
@@ -504,7 +504,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_unskipped',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = { 'j_Bakery_Proxy' },
     dollars = 6,
@@ -536,7 +536,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_loop',
-    category = 'proxy',
+    category = { 'jokers', 'proxy' },
 
     jokers = {},
     dollars = 6,
@@ -573,7 +573,7 @@ Balatest.TestPlay {
 --#region Sticker Sheet
 Balatest.TestPlay {
     name = 'sticker_sheet_null',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet' },
     execute = function()
@@ -585,7 +585,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_eternal',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true } },
     execute = function()
@@ -597,7 +597,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_eternal',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', { id = 'j_golden', eternal = true } },
     execute = function()
@@ -609,7 +609,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_eternal',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_golden', eternal = true } },
     execute = function()
@@ -621,7 +621,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet' },
     execute = function()
@@ -634,7 +634,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
     execute = function()
@@ -647,7 +647,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
     execute = function()
@@ -661,7 +661,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_perishable',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet' },
     execute = function()
@@ -674,7 +674,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_perishable',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
     execute = function()
@@ -687,7 +687,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_perishable',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
     execute = function()
@@ -701,7 +701,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_eternal_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true } },
     execute = function()
@@ -714,7 +714,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_eternal_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { 'j_Bakery_StickerSheet', { id = 'j_golden', eternal = true } },
     execute = function()
@@ -727,7 +727,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_eternal_rental',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_golden', eternal = true } },
     execute = function()
@@ -741,7 +741,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_order_1',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_joker', eternal = true } },
     execute = function()
@@ -753,7 +753,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_order_2',
-    category = 'sticker_sheet',
+    category = { 'jokers', 'sticker_sheet' },
 
     jokers = { { id = 'j_joker', eternal = true }, { id = 'j_Bakery_StickerSheet', eternal = true } },
     execute = function()
@@ -768,7 +768,7 @@ Balatest.TestPlay {
 --#region 1 of Spades
 Balatest.TestPlay {
     name = '1_of_spades_level_1',
-    category = '1_of_spades',
+    category = { 'jokers', '1_of_spades' },
 
     jokers = { 'j_Bakery_PlayingCard' },
     execute = function()
@@ -780,7 +780,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = '1_of_spades_level_2',
-    category = '1_of_spades',
+    category = { 'jokers', '1_of_spades' },
 
     jokers = { 'j_Bakery_PlayingCard' },
     execute = function()
@@ -796,7 +796,7 @@ Balatest.TestPlay {
 --#region 11 of Spades
 Balatest.TestPlay {
     name = '11_of_spades_level_1',
-    category = '11_of_spades',
+    category = { 'jokers', '11_of_spades' },
 
     jokers = { 'j_Bakery_PlayingCard11' },
     execute = function()
@@ -808,7 +808,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = '11_of_spades_level_2',
-    category = '11_of_spades',
+    category = { 'jokers', '11_of_spades' },
 
     jokers = { 'j_Bakery_PlayingCard11' },
     execute = function()
@@ -824,7 +824,7 @@ Balatest.TestPlay {
 --#region Evil Steven
 Balatest.TestPlay {
     name = 'evil_steven_2_4',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     execute = function()
@@ -837,7 +837,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_6_8',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     execute = function()
@@ -850,7 +850,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_10_Q',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     execute = function()
@@ -863,7 +863,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_A_J_K',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     execute = function()
@@ -878,7 +878,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_unscoring',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     execute = function()
@@ -891,7 +891,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_strength',
-    category = 'evil_steven',
+    category = { 'jokers', 'evil_steven' },
 
     jokers = { 'j_Bakery_EvilSteven' },
     consumeables = { 'c_strength', 'c_strength' },
@@ -913,7 +913,7 @@ Balatest.TestPlay {
 --#region Awful Todd
 Balatest.TestPlay {
     name = 'awful_todd_A_3',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     execute = function()
@@ -926,7 +926,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_5_7',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     execute = function()
@@ -939,7 +939,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_9_J',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     execute = function()
@@ -952,7 +952,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_10_Q_K',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     execute = function()
@@ -967,7 +967,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_unscoring',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     execute = function()
@@ -980,7 +980,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_strength',
-    category = 'awful_todd',
+    category = { 'jokers', 'awful_todd' },
 
     jokers = { 'j_Bakery_AwfulTodd' },
     consumeables = { 'c_strength', 'c_strength' },
@@ -1002,7 +1002,7 @@ Balatest.TestPlay {
 --#region Joker Against Humanity
 Balatest.TestPlay {
     name = 'joker_against_humanity_null',
-    category = 'joker_against_humanity',
+    category = { 'jokers', 'joker_against_humanity' },
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
     execute = function()
@@ -1015,7 +1015,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades',
-    category = 'joker_against_humanity',
+    category = { 'jokers', 'joker_against_humanity' },
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
     execute = function()
@@ -1027,7 +1027,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades_twice',
-    category = 'joker_against_humanity',
+    category = { 'jokers', 'joker_against_humanity' },
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
     execute = function()
@@ -1040,7 +1040,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades_kept',
-    category = 'joker_against_humanity',
+    category = { 'jokers', 'joker_against_humanity' },
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
     execute = function()
@@ -1085,7 +1085,7 @@ end
 
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_null',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function() end,
@@ -1095,7 +1095,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_one',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1107,7 +1107,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_two',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1119,7 +1119,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hold',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1135,7 +1135,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hold_highlight',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1150,7 +1150,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_unhold',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1168,7 +1168,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_sell',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1185,7 +1185,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_in_shop',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1203,7 +1203,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_sell_in_shop',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     execute = function()
@@ -1222,7 +1222,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_gold',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     deck = { cards = { { r = '2', s = 'S', e = 'm_gold' }, { r = '3', s = 'S', e = 'm_gold' } } },
@@ -1239,7 +1239,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_two',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve', 'j_Bakery_CardSleeve' },
     deck = { cards = { { r = '2', s = 'S', e = 'm_gold' }, { r = '3', s = 'S', e = 'm_gold' }, { r = '4', s = 'S' }, { r = '5', s = 'S' } } },
@@ -1258,7 +1258,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_two_retrieve',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve', 'j_Bakery_CardSleeve' },
     deck = { cards = { { r = '2', s = 'S', e = 'm_gold' }, { r = '3', s = 'S', e = 'm_gold' }, { r = '4', s = 'S' }, { r = '5', s = 'S' } } },
@@ -1279,7 +1279,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     consumeables = { 'c_chariot' },
@@ -1302,7 +1302,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot_release',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     consumeables = { 'c_chariot' },
@@ -1326,7 +1326,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hanged_man',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     consumeables = { 'c_hanged_man' },
@@ -1350,7 +1350,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hanged_man_add',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     consumeables = { 'c_hanged_man' },
@@ -1376,7 +1376,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot_in_shop',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     consumeables = { 'c_chariot' },
@@ -1401,7 +1401,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     dollars = 10,
@@ -1421,7 +1421,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_retrieved',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     dollars = 10,
@@ -1443,7 +1443,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_sold',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     dollars = 10,
@@ -1465,7 +1465,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_death',
-    category = 'card_sleeve',
+    category = { 'jokers', 'card_sleeve' },
 
     jokers = { 'j_Bakery_CardSleeve' },
     dollars = 10,
@@ -1496,7 +1496,7 @@ Balatest.TestPlay {
 --#region Bongard Problem
 Balatest.TestPlay {
     name = 'bongard_problem_standard',
-    category = 'bongard_problem',
+    category = { 'jokers', 'bongard_problem' },
 
     jokers = { 'j_Bakery_BongardProblem' },
     execute = function()
@@ -1508,7 +1508,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_same_suit',
-    category = 'bongard_problem',
+    category = { 'jokers', 'bongard_problem' },
 
     jokers = { 'j_Bakery_BongardProblem' },
     execute = function()
@@ -1520,7 +1520,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_single',
-    category = 'bongard_problem',
+    category = { 'jokers', 'bongard_problem' },
 
     jokers = { 'j_Bakery_BongardProblem' },
     execute = function()
@@ -1532,7 +1532,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_single_wild',
-    category = 'bongard_problem',
+    category = { 'jokers', 'bongard_problem' },
 
     jokers = { 'j_Bakery_BongardProblem' },
     deck = { cards = { { s = 'S', r = '2', e = 'm_wild' }, { s = 'S', r = '3' } } },
@@ -1548,7 +1548,7 @@ Balatest.TestPlay {
 --#region Coin Slot
 Balatest.TestPlay {
     name = 'coin_slot_null',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot' },
     execute = function()
@@ -1560,7 +1560,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_inserted',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot' },
     dollars = 10,
@@ -1575,7 +1575,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_inserted_twice',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot' },
     dollars = 10,
@@ -1592,7 +1592,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_no_debt',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot' },
     dollars = 0,
@@ -1603,7 +1603,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_no_debt_click',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot' },
     dollars = 0,
@@ -1618,7 +1618,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_yes_debt',
-    category = 'coin_slot',
+    category = { 'jokers', 'coin_slot' },
 
     jokers = { 'j_Bakery_CoinSlot', 'j_credit_card' },
     dollars = 0,
@@ -1636,7 +1636,7 @@ Balatest.TestPlay {
 --#region Pyrite
 Balatest.TestPlay {
     name = 'pyrite_normal',
-    category = 'pyrite',
+    category = { 'jokers', 'pyrite' },
 
     jokers = { 'j_Bakery_Pyrite' },
     hand_size = 5,
@@ -1647,7 +1647,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'pyrite_full',
-    category = 'pyrite',
+    category = { 'jokers', 'pyrite' },
 
     jokers = { 'j_Bakery_Pyrite' },
     deck = { cards = { { s = 'S', r = 'A' } } },
@@ -1662,7 +1662,7 @@ Balatest.TestPlay {
 --#region Snowball
 Balatest.TestPlay {
     name = 'snowball_1',
-    category = 'snowball',
+    category = { 'jokers', 'snowball' },
 
     jokers = { 'j_joker', 'j_joker', 'j_Bakery_Snowball' },
     execute = function()
@@ -1674,7 +1674,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'snowball_5',
-    category = 'snowball',
+    category = { 'jokers', 'snowball' },
 
     jokers = { 'j_joker', 'j_joker', 'j_Bakery_Snowball' },
     execute = function()
@@ -1693,7 +1693,7 @@ Balatest.TestPlay {
 --#region Get Out of Jail Free Card
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_null',
-    category = 'get_out_of_jail_free_card',
+    category = { 'jokers', 'get_out_of_jail_free_card' },
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
     execute = function()
@@ -1705,7 +1705,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_used',
-    category = 'get_out_of_jail_free_card',
+    category = { 'jokers', 'get_out_of_jail_free_card' },
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
     execute = function()
@@ -1718,7 +1718,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_used_across_rounds',
-    category = 'get_out_of_jail_free_card',
+    category = { 'jokers', 'get_out_of_jail_free_card' },
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
     execute = function()
@@ -1732,7 +1732,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_use_twice',
-    category = 'get_out_of_jail_free_card',
+    category = { 'jokers', 'get_out_of_jail_free_card' },
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
     execute = function()
@@ -1747,7 +1747,7 @@ Balatest.TestPlay {
 --#region Transparent Back Buffer
 Balatest.TestPlay {
     name = 'transparent_back_buffer_1',
-    category = 'transparent_back_buffer',
+    category = { 'jokers', 'transparent_back_buffer' },
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
     execute = function()
@@ -1759,7 +1759,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_k_r',
-    category = 'transparent_back_buffer',
+    category = { 'jokers', 'transparent_back_buffer' },
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
     execute = function()
@@ -1771,7 +1771,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_r_k',
-    category = 'transparent_back_buffer',
+    category = { 'jokers', 'transparent_back_buffer' },
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
     execute = function()
@@ -1783,7 +1783,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_wild',
-    category = 'transparent_back_buffer',
+    category = { 'jokers', 'transparent_back_buffer' },
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
     deck = { cards = { { s = 'S', r = 'A', e = 'm_wild' }, { s = 'S', r = 'A', e = 'm_wild' }, { s = 'S', r = 'A', e = 'm_wild' }, { s = 'S', r = 'A', e = 'm_wild' }, { s = 'S', r = 'A', e = 'm_wild' }, { s = 'S', r = '2' } } },
@@ -1796,7 +1796,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_stone',
-    category = 'transparent_back_buffer',
+    category = { 'jokers', 'transparent_back_buffer' },
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
     deck = { cards = { { s = 'S', r = 'A', e = 'm_stone' }, { s = 'S', r = '2' } } },
@@ -1812,7 +1812,7 @@ Balatest.TestPlay {
 --#region Tier List
 Balatest.TestPlay {
     name = 'tier_list_solo',
-    category = 'tier_list',
+    category = { 'jokers', 'tier_list' },
 
     jokers = { 'j_Bakery_TierList' },
     execute = function()
@@ -1824,7 +1824,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden',
-    category = 'tier_list',
+    category = { 'jokers', 'tier_list' },
 
     jokers = { 'j_Bakery_TierList', 'j_golden' },
     execute = function()
@@ -1836,7 +1836,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_golden',
-    category = 'tier_list',
+    category = { 'jokers', 'tier_list' },
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_golden' },
     execute = function()
@@ -1848,7 +1848,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_stone',
-    category = 'tier_list',
+    category = { 'jokers', 'tier_list' },
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_stone' },
     execute = function()
@@ -1860,7 +1860,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_stone_chicot',
-    category = 'tier_list',
+    category = { 'jokers', 'tier_list' },
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_stone', 'j_chicot' },
     execute = function()
@@ -1875,7 +1875,7 @@ Balatest.TestPlay {
 --#region Tag
 Balatest.TestPlay {
     name = 'tag_null',
-    category = 'tag',
+    category = { 'jokers', 'tag' },
 
     jokers = { 'j_Bakery_Tag' },
     execute = function()
@@ -1887,7 +1887,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_one',
-    category = 'tag',
+    category = { 'jokers', 'tag' },
 
     jokers = { 'j_Bakery_Tag' },
     no_auto_start = true,
@@ -1902,7 +1902,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_two',
-    category = 'tag',
+    category = { 'jokers', 'tag' },
 
     jokers = { 'j_Bakery_Tag' },
     no_auto_start = true,
@@ -1918,7 +1918,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_gone',
-    category = 'tag',
+    category = { 'jokers', 'tag' },
 
     jokers = { 'j_Bakery_Tag' },
     no_auto_start = true,
@@ -1943,7 +1943,7 @@ Balatest.TestPlay {
 --#region Glass Cannon
 Balatest.TestPlay {
     name = 'glass_cannon_no_shatter',
-    category = 'glass_cannon',
+    category = { 'jokers', 'glass_cannon' },
 
     jokers = { 'j_Bakery_GlassCannon' },
     execute = function()
@@ -1956,7 +1956,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'glass_cannon_yes_shatter',
-    category = 'glass_cannon',
+    category = { 'jokers', 'glass_cannon' },
 
     jokers = { 'j_order', 'j_order', 'j_Bakery_GlassCannon' },
     execute = function()
@@ -1969,7 +1969,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'glass_cannon_yes_shatter_avoided',
-    category = 'glass_cannon',
+    category = { 'jokers', 'glass_cannon' },
 
     jokers = { 'j_Bakery_GlassCannon', 'j_order', 'j_order' },
     execute = function()

@@ -2,7 +2,7 @@
 
 Balatest.TestPlay {
     name = 'carbon_joker',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon' } },
     execute = function()
@@ -14,7 +14,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_joker_no_play',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon' } },
     execute = function()
@@ -26,7 +26,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_card',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     deck = { cards = { { s = 'S', r = '2', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
     execute = function()
@@ -39,7 +39,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_card_in_hand',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     deck = { cards = { { s = 'S', r = '2', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
     execute = function()
@@ -52,7 +52,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_gold_card_in_hand',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     deck = { cards = { { s = 'S', r = '2', e = 'm_gold', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
     dollars = 0,
@@ -67,7 +67,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_joker_eternal',
-    category = 'editions',
+    category = { 'editions', 'carbon' },
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon', eternal = true } },
     execute = function()

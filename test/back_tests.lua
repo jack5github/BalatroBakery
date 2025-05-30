@@ -2,7 +2,7 @@
 
 Balatest.TestPlay {
     name = 'violet',
-    category = 'backs',
+    category = { 'backs', 'violet_deck' },
 
     back = 'Violet',
     execute = function()
@@ -15,7 +15,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'house_yes',
-    category = 'backs',
+    category = { 'backs', 'house_deck' },
 
     back = 'House',
     seed = 'House',
@@ -31,7 +31,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'house_no',
-    category = 'backs',
+    category = { 'backs', 'house_deck' },
 
     back = 'House',
     seed = 'House',
@@ -48,7 +48,7 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'credit_cash_out',
-    category = 'backs',
+    category = { 'backs', 'credit_deck' },
 
     back = 'Credit',
     custom_rules = {
@@ -71,7 +71,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'credit_rental_gold',
-    category = 'backs',
+    category = { 'backs', 'credit_deck' },
 
     back = 'Credit',
     money = 0,
@@ -87,7 +87,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'credit_purchase',
-    category = 'backs',
+    category = { 'backs', 'credit_deck' },
 
     back = 'Credit',
     money = 2,
