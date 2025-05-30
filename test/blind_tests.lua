@@ -2,7 +2,6 @@
 
 Balatest.TestPlay {
     name = 'leader',
-    requires = {},
     category = 'blinds',
 
     hands = 5,
@@ -16,7 +15,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'leader_chicot',
-    requires = {},
     category = 'blinds',
 
     jokers = { 'j_chicot' },
@@ -32,7 +30,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'attrition',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_Tsadi',
@@ -45,7 +42,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'attrition_chicot',
-    requires = {},
     category = 'blinds',
 
     jokers = { 'j_chicot' },
@@ -60,7 +56,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'solo_single',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_He',
@@ -73,7 +68,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_double',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_He',
@@ -86,7 +80,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_straight',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_He',
@@ -99,7 +92,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'solo_chicot',
-    requires = {},
     category = 'blinds',
 
     jokers = { 'j_chicot' },
@@ -114,7 +106,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'witch',
-    requires = {},
     category = 'blinds',
 
     hand_size = 100,
@@ -126,7 +117,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'witch_chicot',
-    requires = {},
     category = 'blinds',
 
     hand_size = 100,
@@ -140,7 +130,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'build',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_Kaf',
@@ -153,7 +142,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'build_chicot',
-    requires = {},
     category = 'blinds',
 
     blind = 'bl_Bakery_Kaf',

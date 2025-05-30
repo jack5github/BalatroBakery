@@ -2,7 +2,6 @@
 
 Balatest.TestPlay {
     name = 'violet',
-    requires = {},
     category = 'backs',
 
     back = 'Violet',
@@ -16,7 +15,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'house_yes',
-    requires = {},
     category = 'backs',
 
     back = 'House',
@@ -33,7 +31,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'house_no',
-    requires = {},
     category = 'backs',
 
     back = 'House',
@@ -51,7 +48,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'credit_cash_out',
-    requires = {},
     category = 'backs',
 
     back = 'Credit',
@@ -75,7 +71,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'credit_rental_gold',
-    requires = {},
     category = 'backs',
 
     back = 'Credit',
@@ -92,7 +87,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'credit_purchase',
-    requires = {},
     category = 'backs',
 
     back = 'Credit',

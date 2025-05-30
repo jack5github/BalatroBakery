@@ -3,7 +3,6 @@
 --#region Scribe
 Balatest.TestPlay {
     name = 'scribe_can_use_null',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -15,7 +14,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -29,7 +27,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -43,7 +40,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_two_playing',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -57,7 +53,6 @@ Balatest.TestPlay {
 }
 -- Balatest.TestPlay {
 --     name = 'scribe_can_use_two_joker',
---     requires = {},
 --     category = 'consumables',
 
 --     jokers = { 'j_joker', 'j_joker' },
@@ -72,7 +67,6 @@ Balatest.TestPlay {
 -- }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing_joker',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker', 'j_joker' },
@@ -87,7 +81,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_full',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
@@ -101,7 +94,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_playing',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
@@ -118,7 +110,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_playing_edition',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
@@ -133,7 +124,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_playing_edition',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
@@ -151,7 +141,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_edition',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -167,7 +156,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -184,7 +172,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker_edition',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -202,7 +189,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_can_use_joker_eternal',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -217,7 +203,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_use_joker_eternal',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_joker' },
@@ -235,7 +220,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_hologram_joker',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_hologram' },
@@ -250,7 +234,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'scribe_hologram_card',
-    requires = {},
     category = 'consumables',
 
     jokers = { 'j_hologram' },
@@ -268,7 +251,6 @@ Balatest.TestPlay {
 --#region Time Machine
 Balatest.TestPlay {
     name = 'time_machine_can_use_null',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -279,7 +261,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_one',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -292,7 +273,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_two',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -305,7 +285,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_use',
-    requires = { 'time_machine_can_use_one' },
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -321,7 +300,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_can_use_enhanced',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -335,7 +313,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_machine_use_enhanced',
-    requires = { 'time_machine_can_use_enhanced' },
     category = 'consumables',
 
     consumeables = { 'c_Bakery_TimeMachine' },
@@ -354,7 +331,6 @@ Balatest.TestPlay {
 --#region Astrology
 Balatest.TestPlay {
     name = 'astrology_can_use_null',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_Astrology' },
@@ -365,7 +341,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_can_use_one',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_Astrology' },
@@ -378,7 +353,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_one',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_Astrology' },
@@ -394,7 +368,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_two',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_Astrology' },
@@ -410,7 +383,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'astrology_use_two_split',
-    requires = {},
     category = 'consumables',
 
     consumeables = { 'c_Bakery_Astrology' },

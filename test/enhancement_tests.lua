@@ -3,7 +3,6 @@
 --#region Time Walk
 Balatest.TestPlay {
     name = 'time_walk_high_card',
-    requires = {},
     category = 'enhancements',
 
     hands = 1,
@@ -18,7 +17,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_walk_high_card_red_seal',
-    requires = {},
     category = 'enhancements',
 
     hands = 1,
@@ -33,7 +31,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'time_walk_with_other',
-    requires = {},
     category = 'enhancements',
 
     hands = 1,
@@ -51,7 +48,6 @@ Balatest.TestPlay {
 --#region Curse
 Balatest.TestPlay {
     name = 'curse_high_card',
-    requires = {},
     category = 'enhancements',
 
     deck = { cards = { { r = '2', s = 'S', e = 'm_Bakery_Curse' }, { r = '3', s = 'S' } } },
@@ -64,7 +60,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'curse_high_card_gold_seal',
-    requires = {},
     category = 'enhancements',
 
     deck = { cards = { { r = '2', s = 'S', e = 'm_Bakery_Curse', g = 'Gold' }, { r = '3', s = 'S' } } },
@@ -79,7 +74,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'curse_high_card_gold_seal_with_other',
-    requires = {},
     category = 'enhancements',
 
     deck = { cards = { { r = '2', s = 'S', e = 'm_Bakery_Curse', g = 'Gold' }, { r = '3', s = 'S' }, { r = '4', s = 'S' } } },

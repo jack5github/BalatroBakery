@@ -3,7 +3,6 @@
 --#region Tarmogoyf
 Balatest.TestPlay {
     name = 'tarmogoyf_null',
-    requires = {},
     category = 'tarmogoyf',
 
     jokers = { 'j_Bakery_Tarmogoyf' },
@@ -16,7 +15,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded',
-    requires = {},
     category = 'tarmogoyf',
 
     jokers = { 'j_Bakery_Tarmogoyf' },
@@ -30,7 +28,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded_duplicates',
-    requires = {},
     category = 'tarmogoyf',
 
     jokers = { 'j_Bakery_Tarmogoyf' },
@@ -44,7 +41,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_discarded_multiple',
-    requires = {},
     category = 'tarmogoyf',
 
     jokers = { 'j_Bakery_Tarmogoyf' },
@@ -59,7 +55,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tarmogoyf_reset',
-    requires = {},
     category = 'tarmogoyf',
 
     jokers = { 'j_Bakery_Tarmogoyf' },
@@ -77,7 +72,6 @@ Balatest.TestPlay {
 --#region Auctioneer
 Balatest.TestPlay {
     name = 'auctioneer_none',
-    requires = {},
     category = 'auctioneer',
 
     jokers = { 'j_Bakery_Auctioneer' },
@@ -90,7 +84,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_j_joker',
-    requires = {},
     category = 'auctioneer',
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker' },
@@ -103,7 +96,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_j_caino',
-    requires = {},
     category = 'auctioneer',
 
     jokers = { 'j_Bakery_Auctioneer', 'j_caino' },
@@ -116,7 +108,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_twice_half',
-    requires = {},
     category = 'auctioneer',
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker', 'j_joker' },
@@ -130,7 +121,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'auctioneer_twice',
-    requires = {},
     category = 'auctioneer',
 
     jokers = { 'j_Bakery_Auctioneer', 'j_joker', 'j_joker' },
@@ -148,7 +138,6 @@ Balatest.TestPlay {
 --#region Don
 Balatest.TestPlay {
     name = 'don',
-    requires = {},
     category = 'don',
 
     jokers = { 'j_Bakery_Don' },
@@ -163,7 +152,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'don_debt',
-    requires = {},
     category = 'don',
 
     jokers = { 'j_Bakery_Don' },
@@ -178,7 +166,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'don_deep_debt',
-    requires = {},
     category = 'don',
 
     jokers = { 'j_Bakery_Don' },
@@ -196,7 +183,6 @@ Balatest.TestPlay {
 --#region Werewolf
 Balatest.TestPlay {
     name = 'werewolf_front',
-    requires = {},
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -209,7 +195,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_front_flips',
-    requires = {},
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -222,7 +207,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_front_does_not_flip',
-    requires = {},
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -236,7 +220,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back',
-    requires = { 'werewolf_front_flips' },
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -250,7 +233,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_does_not_flip_0',
-    requires = { 'werewolf_front_flips' },
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -264,7 +246,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_does_not_flip_1',
-    requires = { 'werewolf_front_flips' },
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -279,7 +260,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'werewolf_back_flips',
-    requires = { 'werewolf_front_flips' },
     category = 'werewolf',
 
     jokers = { 'j_Bakery_Werewolf' },
@@ -298,7 +278,6 @@ Balatest.TestPlay {
 --#region Spinner
 Balatest.TestPlay {
     name = 'spinner_0',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -312,7 +291,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_1',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -326,7 +304,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_2',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -340,7 +317,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_3',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -356,7 +332,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_0',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -370,7 +345,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_1',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -384,7 +358,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_2',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -398,7 +371,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'spinner_spins_3',
-    requires = {},
     category = 'spinner',
 
     jokers = { 'j_Bakery_Spinner' },
@@ -415,7 +387,6 @@ Balatest.TestPlay {
 --#region Proxy
 Balatest.TestPlay {
     name = 'proxy_null',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -428,7 +399,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_judgement',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -447,7 +417,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_with_timestamp',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy', 'j_joker' },
@@ -463,7 +432,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_pack',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -487,7 +455,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_joker_from_shop',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -512,7 +479,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_skipped',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -538,7 +504,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_unskipped',
-    requires = {},
     category = 'proxy',
 
     jokers = { 'j_Bakery_Proxy' },
@@ -571,7 +536,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'proxy_loop',
-    requires = {},
     category = 'proxy',
 
     jokers = {},
@@ -609,7 +573,6 @@ Balatest.TestPlay {
 --#region Sticker Sheet
 Balatest.TestPlay {
     name = 'sticker_sheet_null',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet' },
@@ -622,7 +585,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_eternal',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true } },
@@ -635,7 +597,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_eternal',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', { id = 'j_golden', eternal = true } },
@@ -648,7 +609,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_eternal',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_golden', eternal = true } },
@@ -661,7 +621,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet' },
@@ -675,7 +634,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
@@ -689,7 +647,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
@@ -704,7 +661,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_perishable',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet' },
@@ -718,7 +674,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_perishable',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
@@ -732,7 +687,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_perishable',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', 'j_golden' },
@@ -747,7 +701,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_self_eternal_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true } },
@@ -761,7 +714,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_other_eternal_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { 'j_Bakery_StickerSheet', { id = 'j_golden', eternal = true } },
@@ -775,7 +727,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_two_eternal_rental',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_golden', eternal = true } },
@@ -790,7 +741,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_order_1',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_Bakery_StickerSheet', eternal = true }, { id = 'j_joker', eternal = true } },
@@ -803,7 +753,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'sticker_sheet_order_2',
-    requires = {},
     category = 'sticker_sheet',
 
     jokers = { { id = 'j_joker', eternal = true }, { id = 'j_Bakery_StickerSheet', eternal = true } },
@@ -819,7 +768,6 @@ Balatest.TestPlay {
 --#region 1 of Spades
 Balatest.TestPlay {
     name = '1_of_spades_level_1',
-    requires = {},
     category = '1_of_spades',
 
     jokers = { 'j_Bakery_PlayingCard' },
@@ -832,7 +780,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = '1_of_spades_level_2',
-    requires = {},
     category = '1_of_spades',
 
     jokers = { 'j_Bakery_PlayingCard' },
@@ -849,7 +796,6 @@ Balatest.TestPlay {
 --#region 11 of Spades
 Balatest.TestPlay {
     name = '11_of_spades_level_1',
-    requires = {},
     category = '11_of_spades',
 
     jokers = { 'j_Bakery_PlayingCard11' },
@@ -862,7 +808,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = '11_of_spades_level_2',
-    requires = {},
     category = '11_of_spades',
 
     jokers = { 'j_Bakery_PlayingCard11' },
@@ -879,7 +824,6 @@ Balatest.TestPlay {
 --#region Evil Steven
 Balatest.TestPlay {
     name = 'evil_steven_2_4',
-    requires = {},
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -893,7 +837,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_6_8',
-    requires = {},
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -907,7 +850,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_10_Q',
-    requires = {},
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -921,7 +863,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_A_J_K',
-    requires = {},
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -937,7 +878,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_unscoring',
-    requires = { 'evil_steven_2_4' },
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -951,7 +891,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'evil_steven_strength',
-    requires = {},
     category = 'evil_steven',
 
     jokers = { 'j_Bakery_EvilSteven' },
@@ -974,7 +913,6 @@ Balatest.TestPlay {
 --#region Awful Todd
 Balatest.TestPlay {
     name = 'awful_todd_A_3',
-    requires = {},
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -988,7 +926,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_5_7',
-    requires = {},
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -1002,7 +939,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_9_J',
-    requires = {},
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -1016,7 +952,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_10_Q_K',
-    requires = {},
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -1032,7 +967,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_unscoring',
-    requires = { 'awful_todd_A_3' },
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -1046,7 +980,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'awful_todd_strength',
-    requires = {},
     category = 'awful_todd',
 
     jokers = { 'j_Bakery_AwfulTodd' },
@@ -1069,7 +1002,6 @@ Balatest.TestPlay {
 --#region Joker Against Humanity
 Balatest.TestPlay {
     name = 'joker_against_humanity_null',
-    requires = {},
     category = 'joker_against_humanity',
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
@@ -1083,7 +1015,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades',
-    requires = {},
     category = 'joker_against_humanity',
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
@@ -1096,7 +1027,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades_twice',
-    requires = { 'joker_against_humanity_upgrades' },
     category = 'joker_against_humanity',
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
@@ -1110,7 +1040,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'joker_against_humanity_upgrades_kept',
-    requires = { 'joker_against_humanity_upgrades_twice' },
     category = 'joker_against_humanity',
 
     jokers = { 'j_Bakery_JokerAgainstHumanity' },
@@ -1156,7 +1085,6 @@ end
 
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_null',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1167,7 +1095,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_one',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1180,7 +1107,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_two',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1193,7 +1119,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hold',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1210,7 +1135,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hold_highlight',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1226,7 +1150,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_unhold',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1245,7 +1168,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_sell',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1263,7 +1185,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_can_use_in_shop',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1282,7 +1203,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_sell_in_shop',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1302,7 +1222,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_gold',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1320,7 +1239,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_two',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve', 'j_Bakery_CardSleeve' },
@@ -1340,7 +1258,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_two_retrieve',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve', 'j_Bakery_CardSleeve' },
@@ -1362,7 +1279,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1386,7 +1302,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot_release',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1411,7 +1326,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hanged_man',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1436,7 +1350,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_hanged_man_add',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1463,7 +1376,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_chariot_in_shop',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1489,7 +1401,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1510,7 +1421,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_retrieved',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1533,7 +1443,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_sold',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1556,7 +1465,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'card_sleeve_in_pack_death',
-    requires = {},
     category = 'card_sleeve',
 
     jokers = { 'j_Bakery_CardSleeve' },
@@ -1588,7 +1496,6 @@ Balatest.TestPlay {
 --#region Bongard Problem
 Balatest.TestPlay {
     name = 'bongard_problem_standard',
-    requires = {},
     category = 'bongard_problem',
 
     jokers = { 'j_Bakery_BongardProblem' },
@@ -1601,7 +1508,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_same_suit',
-    requires = {},
     category = 'bongard_problem',
 
     jokers = { 'j_Bakery_BongardProblem' },
@@ -1614,7 +1520,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_single',
-    requires = {},
     category = 'bongard_problem',
 
     jokers = { 'j_Bakery_BongardProblem' },
@@ -1627,7 +1532,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bongard_problem_single_wild',
-    requires = {},
     category = 'bongard_problem',
 
     jokers = { 'j_Bakery_BongardProblem' },
@@ -1644,7 +1548,6 @@ Balatest.TestPlay {
 --#region Coin Slot
 Balatest.TestPlay {
     name = 'coin_slot_null',
-    requires = {},
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot' },
@@ -1657,7 +1560,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_inserted',
-    requires = {},
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot' },
@@ -1673,7 +1575,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_inserted_twice',
-    requires = { 'coin_slot_inserted' },
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot' },
@@ -1691,7 +1592,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_no_debt',
-    requires = {},
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot' },
@@ -1703,7 +1603,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_no_debt_click',
-    requires = {},
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot' },
@@ -1719,7 +1618,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'coin_slot_yes_debt',
-    requires = {},
     category = 'coin_slot',
 
     jokers = { 'j_Bakery_CoinSlot', 'j_credit_card' },
@@ -1738,7 +1636,6 @@ Balatest.TestPlay {
 --#region Pyrite
 Balatest.TestPlay {
     name = 'pyrite_normal',
-    requires = {},
     category = 'pyrite',
 
     jokers = { 'j_Bakery_Pyrite' },
@@ -1750,7 +1647,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'pyrite_full',
-    requires = {},
     category = 'pyrite',
 
     jokers = { 'j_Bakery_Pyrite' },
@@ -1766,7 +1662,6 @@ Balatest.TestPlay {
 --#region Snowball
 Balatest.TestPlay {
     name = 'snowball_1',
-    requires = {},
     category = 'snowball',
 
     jokers = { 'j_joker', 'j_joker', 'j_Bakery_Snowball' },
@@ -1779,7 +1674,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'snowball_5',
-    requires = {},
     category = 'snowball',
 
     jokers = { 'j_joker', 'j_joker', 'j_Bakery_Snowball' },
@@ -1799,7 +1693,6 @@ Balatest.TestPlay {
 --#region Get Out of Jail Free Card
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_null',
-    requires = {},
     category = 'get_out_of_jail_free_card',
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
@@ -1812,7 +1705,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_used',
-    requires = {},
     category = 'get_out_of_jail_free_card',
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
@@ -1826,7 +1718,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_used_across_rounds',
-    requires = { 'get_out_of_jail_free_card_used' },
     category = 'get_out_of_jail_free_card',
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
@@ -1841,7 +1732,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'get_out_of_jail_free_card_use_twice',
-    requires = {},
     category = 'get_out_of_jail_free_card',
 
     jokers = { 'j_Bakery_GetOutOfJailFreeCard' },
@@ -1857,7 +1747,6 @@ Balatest.TestPlay {
 --#region Transparent Back Buffer
 Balatest.TestPlay {
     name = 'transparent_back_buffer_1',
-    requires = {},
     category = 'transparent_back_buffer',
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
@@ -1870,7 +1759,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_k_r',
-    requires = {},
     category = 'transparent_back_buffer',
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
@@ -1883,7 +1771,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_r_k',
-    requires = {},
     category = 'transparent_back_buffer',
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
@@ -1896,7 +1783,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_5_wild',
-    requires = {},
     category = 'transparent_back_buffer',
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
@@ -1910,7 +1796,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'transparent_back_buffer_stone',
-    requires = {},
     category = 'transparent_back_buffer',
 
     jokers = { 'j_Bakery_TransparentBackBuffer' },
@@ -1927,7 +1812,6 @@ Balatest.TestPlay {
 --#region Tier List
 Balatest.TestPlay {
     name = 'tier_list_solo',
-    requires = {},
     category = 'tier_list',
 
     jokers = { 'j_Bakery_TierList' },
@@ -1940,7 +1824,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden',
-    requires = {},
     category = 'tier_list',
 
     jokers = { 'j_Bakery_TierList', 'j_golden' },
@@ -1953,7 +1836,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_golden',
-    requires = {},
     category = 'tier_list',
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_golden' },
@@ -1966,7 +1848,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_stone',
-    requires = {},
     category = 'tier_list',
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_stone' },
@@ -1979,7 +1860,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tier_list_golden_stone_chicot',
-    requires = {},
     category = 'tier_list',
 
     jokers = { 'j_Bakery_TierList', 'j_golden', 'j_stone', 'j_chicot' },
@@ -1995,7 +1875,6 @@ Balatest.TestPlay {
 --#region Tag
 Balatest.TestPlay {
     name = 'tag_null',
-    requires = {},
     category = 'tag',
 
     jokers = { 'j_Bakery_Tag' },
@@ -2008,7 +1887,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_one',
-    requires = {},
     category = 'tag',
 
     jokers = { 'j_Bakery_Tag' },
@@ -2024,7 +1902,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_two',
-    requires = {},
     category = 'tag',
 
     jokers = { 'j_Bakery_Tag' },
@@ -2041,7 +1918,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'tag_gone',
-    requires = {},
     category = 'tag',
 
     jokers = { 'j_Bakery_Tag' },
@@ -2067,7 +1943,6 @@ Balatest.TestPlay {
 --#region Glass Cannon
 Balatest.TestPlay {
     name = 'glass_cannon_no_shatter',
-    requires = {},
     category = 'glass_cannon',
 
     jokers = { 'j_Bakery_GlassCannon' },
@@ -2081,7 +1956,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'glass_cannon_yes_shatter',
-    requires = {},
     category = 'glass_cannon',
 
     jokers = { 'j_order', 'j_order', 'j_Bakery_GlassCannon' },
@@ -2095,7 +1969,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'glass_cannon_yes_shatter_avoided',
-    requires = {},
     category = 'glass_cannon',
 
     jokers = { 'j_Bakery_GlassCannon', 'j_order', 'j_order' },

@@ -2,7 +2,6 @@
 
 Balatest.TestPlay {
     name = 'carbon_joker',
-    requires = {},
     category = 'editions',
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon' } },
@@ -15,7 +14,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_joker_no_play',
-    requires = {},
     category = 'editions',
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon' } },
@@ -28,7 +26,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_card',
-    requires = {},
     category = 'editions',
 
     deck = { cards = { { s = 'S', r = '2', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
@@ -42,7 +39,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_card_in_hand',
-    requires = {},
     category = 'editions',
 
     deck = { cards = { { s = 'S', r = '2', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
@@ -56,7 +52,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_gold_card_in_hand',
-    requires = { 'carbon_card_in_hand' },
     category = 'editions',
 
     deck = { cards = { { s = 'S', r = '2', e = 'm_gold', d = 'Bakery_Carbon' }, { s = 'S', r = '3' } } },
@@ -72,7 +67,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'carbon_joker_eternal',
-    requires = {},
     category = 'editions',
 
     jokers = { { id = 'j_joker', edition = 'Bakery_Carbon', eternal = true } },

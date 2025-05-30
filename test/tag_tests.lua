@@ -2,7 +2,6 @@
 
 Balatest.TestPlay {
     name = 'retrigger_tag',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -15,7 +14,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'retrigger_tag_shop',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -36,7 +34,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'retrigger_tag_exhausted',
-    requires = {},
     category = 'tags',
 
     jokers = { 'j_mime' },
@@ -58,7 +55,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'chocolate_tag_once',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -76,7 +72,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'chocolate_tag_four_times',
-    requires = {},
     category = 'tags',
 
     blind = 'bl_big',
@@ -98,7 +93,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'chocolate_tag_five_times',
-    requires = {},
     category = 'tags',
 
     blind = 'bl_big',
@@ -121,7 +115,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'poly_tag_once',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -137,7 +130,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'poly_tag_multiple',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -156,7 +148,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'poly_tag_zero',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -172,7 +163,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'penny_tag_one_card',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -190,7 +180,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'penny_tag_two_cards',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -208,7 +197,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'penny_tag_two_cards_high',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -226,7 +214,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'penny_tag_one_card_red_seal',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -245,7 +232,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'penny_tag_five_times',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -267,7 +253,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'blank_tag_inert',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -282,7 +267,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'blank_tag_in_pool_default',
-    requires = {},
     category = 'tags',
 
     execute = function() end,
@@ -292,7 +276,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'blank_tag_in_pool_dup',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -306,7 +289,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'anti_tag_in_pool_default',
-    requires = {},
     category = 'tags',
 
     execute = function() end,
@@ -316,7 +298,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anti_tag_in_pool_dup',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -329,7 +310,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anti_tag_used',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -344,7 +324,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anti_tag_used_two_blank',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -365,7 +344,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'anti_tag_duped_blank',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -386,7 +364,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'equip_tag',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -408,7 +385,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'down_tag_small',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -423,7 +399,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'down_tag_big',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -439,7 +414,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'down_tag_serpent',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -455,7 +429,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'down_tag_vessel',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -471,7 +444,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'down_tag_two',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -489,7 +461,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'up_tag_once',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -506,7 +477,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'up_tag_twice',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -524,7 +494,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'up_tag_thrice',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -542,7 +511,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'up_tag_wrathful',
-    requires = {},
     category = 'tags',
 
     jokers = { 'j_wrathful_joker' },
@@ -575,7 +543,6 @@ local tags_5 = {
 for _, tag in ipairs(tags_3) do
     Balatest.TestPlay {
         name = tag[1] .. '_tag_full',
-        requires = {},
         category = 'tags',
 
         dollars = 0,
@@ -599,7 +566,6 @@ for _, tag in ipairs(tags_3) do
     }
     Balatest.TestPlay {
         name = tag[1] .. '_tag_sub',
-        requires = {},
         category = 'tags',
 
         no_auto_start = true,
@@ -618,7 +584,6 @@ for _, tag in ipairs(tags_3) do
     }
     Balatest.TestPlay {
         name = tag[1] .. '_tag_stack',
-        requires = {},
         category = 'tags',
 
         no_auto_start = true,
@@ -644,7 +609,6 @@ end
 for _, tag in ipairs(tags_5) do
     Balatest.TestPlay {
         name = tag[1] .. '_tag_full',
-        requires = {},
         category = 'tags',
 
         dollars = 0,
@@ -668,7 +632,6 @@ for _, tag in ipairs(tags_5) do
     }
     Balatest.TestPlay {
         name = tag[1] .. '_tag_sub',
-        requires = {},
         category = 'tags',
 
         no_auto_start = true,
@@ -687,7 +650,6 @@ for _, tag in ipairs(tags_5) do
     }
     Balatest.TestPlay {
         name = tag[1] .. '_tag_stack',
-        requires = {},
         category = 'tags',
 
         no_auto_start = true,
@@ -715,7 +677,6 @@ end
 
 Balatest.TestPlay {
     name = 'strange_tag_play_min_shot',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -736,7 +697,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'strange_tag_play_max_shot',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -755,7 +715,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'strange_tag_gone',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -775,7 +734,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'top_tag_52',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -790,7 +748,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'top_tag_0',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -806,7 +763,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'top_tag_1',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -823,7 +779,6 @@ Balatest.TestPlay {
 
 Balatest.TestPlay {
     name = 'bottom_tag_empty',
-    requires = {},
     category = 'tags',
 
     no_auto_start = true,
@@ -838,7 +793,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bottom_tag_full',
-    requires = {},
     category = 'tags',
 
     jokers = { 'j_joker', 'j_joker', 'j_joker', 'j_joker', 'j_joker' },
@@ -854,7 +808,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bottom_tag_one',
-    requires = {},
     category = 'tags',
 
     jokers = { 'j_joker' },
@@ -870,7 +823,6 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'bottom_tag_black',
-    requires = {},
     category = 'tags',
 
     back = 'Black Deck',
