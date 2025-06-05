@@ -1491,6 +1491,62 @@ Balatest.TestPlay {
         Balatest.assert(G["Bakery_sleeve_" .. G.jokers.cards[1].ability.extra.key].cards[1].base.id == 3)
     end
 }
+Balatest.TestPlay {
+    name = 'card_sleeve_reload_full',
+    category = { 'jokers', 'card_sleeve' },
+
+    jokers = { 'j_Bakery_CardSleeve' },
+    execute = function()
+        Balatest.highlight { '2S' }
+        Balatest.q(function() G.FUNCS.Bakery_use_joker { config = { ref_table = G.jokers.cards[1] } } end)
+        Balatest.end_round()
+        Balatest.reload()
+        Balatest.cash_out()
+    end,
+    assert = function()
+        Balatest.assert(G.jokers.cards[1].ability.extra.area:is(CardArea))
+        Balatest.assert_eq(G.jokers.cards[1].ability.extra.area.cards[1].base.id, 2)
+        Balatest.assert_eq(G.jokers.cards[1].ability.extra.area.cards[1].base.suit, 'Spades')
+        Balatest.assert_eq(#G.jokers.cards[1].ability.extra.area.cards, 1)
+    end,
+}
+Balatest.TestPlay {
+    name = 'card_sleeve_reload_full_empty',
+    category = { 'jokers', 'card_sleeve' },
+
+    jokers = { 'j_Bakery_CardSleeve', 'j_Bakery_CardSleeve' },
+    execute = function()
+        Balatest.highlight { '2S' }
+        Balatest.q(function() G.FUNCS.Bakery_use_joker { config = { ref_table = G.jokers.cards[1] } } end)
+        Balatest.end_round()
+        Balatest.reload()
+        Balatest.cash_out()
+    end,
+    assert = function()
+        Balatest.assert(G.jokers.cards[1].ability.extra.area:is(CardArea))
+        Balatest.assert_eq(G.jokers.cards[1].ability.extra.area.cards[1].base.id, 2)
+        Balatest.assert_eq(G.jokers.cards[1].ability.extra.area.cards[1].base.suit, 'Spades')
+        Balatest.assert_eq(#G.jokers.cards[1].ability.extra.area.cards, 1)
+        Balatest.assert(G.jokers.cards[2].ability.extra.area == nil)
+        Balatest.assert(not G.jokers.cards[2].ability.extra.occupied)
+    end,
+}
+Balatest.TestPlay {
+    name = 'card_sleeve_reload_empty',
+    category = { 'jokers', 'card_sleeve' },
+
+    jokers = { 'j_Bakery_CardSleeve' },
+    execute = function()
+        Balatest.highlight { '2S' }
+        Balatest.end_round()
+        Balatest.reload()
+        Balatest.cash_out()
+    end,
+    assert = function()
+        Balatest.assert(G.jokers.cards[1].ability.extra.area == nil)
+        Balatest.assert(not G.jokers.cards[1].ability.extra.occupied)
+    end,
+}
 --#endregion
 
 --#region Bongard Problem
