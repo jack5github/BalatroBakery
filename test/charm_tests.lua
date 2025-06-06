@@ -690,3 +690,186 @@ Balatest.TestPlay {
     end
 }
 --#endregion
+
+--#region Print Error
+if next(SMODS.find_mod "RevosVault") then
+    Balatest.TestPlay {
+        name = 'print_error_cartomancer',
+        category = { 'charms', 'print_error', 'revos_vault' },
+
+        no_auto_start = true,
+        jokers = { 'j_cartomancer' },
+        execute = function()
+            equip 'BakeryCharm_Bakery_PrintError'
+            Balatest.start_round()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.consumeables.cards, 1)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'print_error_blueprinter',
+        category = { 'charms', 'print_error', 'revos_vault' },
+
+        no_auto_start = true,
+        jokers = { 'j_crv_printer' },
+        execute = function()
+            equip 'BakeryCharm_Bakery_PrintError'
+            Balatest.start_round()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.jokers.cards, 3)
+        end
+    }
+end
+--#endregion
+
+--#region Posterization
+if next(SMODS.find_mod "MoreFluff") then
+    Balatest.TestPlay {
+        name = 'posterization_planet_tarot',
+        category = { 'charms', 'posterization', 'morefluff' },
+
+        consumeables = { 'c_pluto', 'c_death' },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Posterization'
+            Balatest.wait()
+        end,
+        assert = function()
+            Balatest.assert_eq(G.consumeables.config.card_limit, 2)
+            Balatest.assert_eq(G.consumeables.config.Bakery_visual_card_limit, 2)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'posterization_retroactive',
+        category = { 'charms', 'posterization', 'morefluff' },
+
+        consumeables = { 'c_mf_black', 'c_mf_crimson' },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Posterization'
+            Balatest.wait()
+        end,
+        assert = function()
+            Balatest.assert_eq(G.consumeables.config.card_limit, 3)
+            Balatest.assert_eq(G.consumeables.config.Bakery_visual_card_limit, 2)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'posterization_proactive',
+        category = { 'charms', 'posterization', 'morefluff' },
+
+        dollars = 100,
+        execute = function()
+            G.GAME.joker_rate = 0
+            G.GAME.planet_rate = 0
+            G.GAME.tarot_rate = 0
+            G.GAME.rotarot_rate = 0
+            equip 'BakeryCharm_Bakery_Posterization'
+            Balatest.end_round()
+            Balatest.cash_out()
+            Balatest.buy(function() return G.shop_jokers.cards[2] end)
+            Balatest.buy(function() return G.shop_jokers.cards[1] end)
+            Balatest.wait()
+        end,
+        assert = function()
+            Balatest.assert_eq(G.consumeables.config.card_limit, 3)
+            Balatest.assert_eq(G.consumeables.config.Bakery_visual_card_limit, 2)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'posterization_unequip',
+        category = { 'charms', 'posterization', 'morefluff' },
+
+        dollars = 100,
+        execute = function()
+            G.GAME.joker_rate = 0
+            G.GAME.planet_rate = 0
+            G.GAME.tarot_rate = 0
+            G.GAME.rotarot_rate = 0
+            equip 'BakeryCharm_Bakery_Posterization'
+            Balatest.end_round()
+            Balatest.cash_out()
+            Balatest.buy(function() return G.shop_jokers.cards[2] end)
+            Balatest.buy(function() return G.shop_jokers.cards[1] end)
+            equip 'BakeryCharm_Bakery_Coin'
+            Balatest.wait()
+        end,
+        assert = function()
+            Balatest.assert_eq(G.consumeables.config.card_limit, 2)
+        end
+    }
+end
+--#endregion
+
+if next(SMODS.find_mod 'Cryptid') then
+    --#region Marm
+    Balatest.TestPlay {
+        name = 'marm_single',
+        category = { 'charms', 'marm', 'cryptid' },
+
+        execute = function()
+            equip 'BakeryCharm_Bakery_Marm'
+            Balatest.play_hand { '2S' }
+        end,
+        assert = function()
+            Balatest.assert_chips(24)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'marm_straight_flush',
+        category = { 'charms', 'marm', 'cryptid' },
+
+        execute = function()
+            equip 'BakeryCharm_Bakery_Marm'
+            Balatest.play_hand { '2S', '3S', '4S', '5S', '6S' }
+        end,
+        assert = function()
+            Balatest.assert_chips(154)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'marm_junk',
+        category = { 'charms', 'marm', 'cryptid' },
+
+        execute = function()
+            equip 'BakeryCharm_Bakery_Marm'
+            Balatest.play_hand { '2S', '3S', '4S', '5S', '7S' }
+        end,
+        assert = function()
+            Balatest.assert_chips(158)
+        end
+    }
+    Balatest.TestPlay {
+        name = 'marm_jolly',
+        category = { 'charms', 'marm', 'cryptid' },
+
+        jokers = { 'j_jolly' },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Marm'
+            Balatest.play_hand { '2S' }
+        end,
+        assert = function()
+            Balatest.assert_chips(120)
+        end
+    }
+    --#endregion
+
+    --#region Duct Tape
+    Balatest.TestPlay {
+        name = 'duct_tape',
+        category = { 'charms', 'duct_tape', 'cryptid' },
+
+        dollars = 100,
+        execute = function()
+            equip 'BakeryCharm_Bakery_DuctTape'
+        end,
+        assert = function()
+            Balatest.assert_eq(SMODS.Rarities.Common:get_weight(), 0)
+            Balatest.assert_eq(SMODS.Rarities.Uncommon:get_weight(), 0)
+            local e = { config = {} }
+            G.FUNCS.Bakery_can_equip(e)
+            Balatest.assert(e.config.button == nil)
+        end
+    }
+    --#endregion
+end
