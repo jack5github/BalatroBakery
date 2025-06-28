@@ -382,6 +382,51 @@ Balatest.TestPlay {
         Balatest.assert(hand_name == 'Bakery_StuffedFlush')
     end
 }
+Balatest.TestPlay {
+    name = 'pedigree_straight_house',
+    category = { 'charms', 'pedigree' },
+
+    deck = { cards = { { r = '2', s = 'S' }, { r = '3', s = 'S' }, { r = '4', s = 'H' }, { r = '5', s = 'H' }, { r = '6', s = 'H' } } },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Pedigree'
+        Balatest.highlight { '2S', '3S', '4H', '5H', '6H' }
+    end,
+    assert = function()
+        local _, _, _, scoring_hand, hand_name = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        Balatest.assert_eq(#scoring_hand, 5)
+        Balatest.assert(hand_name == 'Bakery_StraightHouse')
+    end
+}
+Balatest.TestPlay {
+    name = 'pedigree_straight_flush_house',
+    category = { 'charms', 'pedigree' },
+
+    deck = { cards = { { r = '2', s = 'S' }, { r = '3', s = 'S' }, { r = '4', s = 'H', e = 'm_wild' }, { r = '5', s = 'H', e = 'm_wild' }, { r = '6', s = 'H', e = 'm_wild' } } },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Pedigree'
+        Balatest.highlight { '2S', '3S', '4H', '5H', '6H' }
+    end,
+    assert = function()
+        local _, _, _, scoring_hand, hand_name = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        Balatest.assert_eq(#scoring_hand, 5)
+        Balatest.assert(hand_name == 'Bakery_StraightFlushHouse')
+    end
+}
+Balatest.TestPlay {
+    name = 'pedigree_royal_flush_house',
+    category = { 'charms', 'pedigree' },
+
+    deck = { cards = { { r = 'T', s = 'S' }, { r = 'J', s = 'S' }, { r = 'Q', s = 'H', e = 'm_wild' }, { r = 'K', s = 'H', e = 'm_wild' }, { r = 'A', s = 'H', e = 'm_wild' } } },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Pedigree'
+        Balatest.highlight { 'TS', 'JS', 'QH', 'KH', 'AH' }
+    end,
+    assert = function()
+        local _, _, _, scoring_hand, hand_name = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        Balatest.assert_eq(#scoring_hand, 5)
+        Balatest.assert(hand_name == 'Bakery_RoyalFlushHouse')
+    end
+}
 --#endregion
 
 --#region Epitaph

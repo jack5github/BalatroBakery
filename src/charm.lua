@@ -592,8 +592,13 @@ SMODS.PokerHand:take_ownership("Two Pair", {
     end
 })
 
+local raw_Flush_House_evaluate = SMODS.PokerHands['Flush House'].evaluate
 local raw_flush_house_modify_display_text = SMODS.PokerHands['Flush House'].modify_display_text
 SMODS.PokerHand:take_ownership("Flush House", {
+    evaluate = function(parts)
+        local val = raw_Flush_House_evaluate(parts)
+        return Bakery_API.maximus_full_house_compat(parts, val, true)
+    end,
     modify_display_text = function(cards, scoring_hand)
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #scoring_hand == 5 then
             local dup = scoring_hand[1]
@@ -621,6 +626,14 @@ SMODS.PokerHand:take_ownership("Flush House", {
                     end
                 end
             end
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
+            local royal = true
+            for j = 1, #scoring_hand do
+                local rank = SMODS.Ranks[scoring_hand[j].base.value]
+                royal = royal and (rank.key == 'Ace' or rank.key == '10' or rank.face)
+            end
+            return royal and "Bakery_RoyalFlushHouse" or "Bakery_StraightFlushHouse"
         end
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
             #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
@@ -678,8 +691,8 @@ Bakery_API.guard(function()
     end
 end)
 -- END_KEEP_LITE
-function Bakery_API.maximus_full_house_compat(parts, val)
-    if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #parts.Bakery_s_3 >= 1 and #parts.Bakery_s_2 >= 2 and #parts.Bakery_s_all_pairs[1] >= 5 then
+function Bakery_API.maximus_full_house_compat(parts, val, flush)
+    if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #parts.Bakery_s_3 >= 1 and #parts.Bakery_s_2 >= 2 and #parts.Bakery_s_all_pairs[1] >= 5 and (not flush or next(parts._flush)) then
         val = { SMODS.merge_lists(val, parts.Bakery_s_all_pairs) }
     end
     return val
@@ -697,6 +710,9 @@ SMODS.PokerHand:take_ownership("Full House", {
             #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
             #get_X_same(2, scoring_hand, true) >= 2 then
             return "Bakery_StuffedHouse"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
+            return "Bakery_StraightHouse"
         end
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #get_X_same(3, scoring_hand, true) >= 1 and
             #get_X_same(2, scoring_hand, true) >= 2 then
