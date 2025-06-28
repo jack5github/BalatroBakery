@@ -475,6 +475,9 @@ Bakery_API.Joker {
     end
 }
 
+local function num(x)
+    return type(x) == "table" and x:to_number() or x
+end
 Bakery_API.Joker {
     key = "PlayingCard",
     pos = {
@@ -498,13 +501,13 @@ Bakery_API.Joker {
         }
     end,
     check_for_unlock = function(self, args)
-        return Bakery_API.to_number(G.GAME.hands["High Card"].level) >= self.config.extra.unlock_level
+        return Bakery_API.big(G.GAME.hands["High Card"].level) >= Bakery_API.big(self.config.extra.unlock_level)
     end,
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = Bakery_API.to_number(G.GAME.hands["High Card"].mult),
-                chips = Bakery_API.to_number(G.GAME.hands["High Card"].chips)
+                mult = num(G.GAME.hands["High Card"].mult),
+                chips = num(G.GAME.hands["High Card"].chips)
             }
         end
     end
@@ -532,13 +535,13 @@ Bakery_API.Joker {
         }
     end,
     check_for_unlock = function(self, args)
-        return Bakery_API.to_number(G.GAME.hands["Pair"].level) >= self.config.extra.unlock_level
+        return Bakery_API.big(G.GAME.hands["Pair"].level) >= Bakery_API.big(self.config.extra.unlock_level)
     end,
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                mult = Bakery_API.to_number(G.GAME.hands["Pair"].mult),
-                chips = Bakery_API.to_number(G.GAME.hands["Pair"].chips)
+                mult = num(G.GAME.hands["Pair"].mult),
+                chips = num(G.GAME.hands["Pair"].chips)
             }
         end
     end
@@ -642,7 +645,7 @@ Bakery_API.Joker {
             }
         end
 
-        if context.before and Bakery_API.to_number(G.GAME.hands[context.scoring_name].level) == 1 and
+        if context.before and Bakery_API.big(G.GAME.hands[context.scoring_name].level) == Bakery_API.big(1) and
             not context.blueprint then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
             return {
@@ -741,8 +744,8 @@ Bakery_API.Joker {
         end
     end,
     Bakery_can_use = function(self, card)
-        return Bakery_API.default_can_use(card) and card.ability.extra.cost <= Bakery_API.to_number(G.GAME.dollars) +
-            Bakery_API.to_number(G.GAME.dollar_buffer or 0) - Bakery_API.to_number(G.GAME.bankrupt_at)
+        return Bakery_API.default_can_use(card) and Bakery_API.big(card.ability.extra.cost) <= Bakery_API.big(G.GAME.dollars) +
+            Bakery_API.big(G.GAME.dollar_buffer or 0) - Bakery_API.big(G.GAME.bankrupt_at)
     end,
     Bakery_use_joker = function(self, card)
         -- G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) - card.ability.extra.cost
@@ -1090,7 +1093,7 @@ Bakery_API.Joker {
             SMODS.calculate_effect({
                 x_mult = card.ability.extra.x_mult
             }, card)
-            if Bakery_API.to_number(mult) >= card.ability.extra.limit and not context.blueprint then
+            if Bakery_API.big(mult) >= Bakery_API.big(card.ability.extra.limit) and not context.blueprint then
                 G.E_MANAGER:add_event(Event {
                     trigger = 'before',
                     delay = 0.4,

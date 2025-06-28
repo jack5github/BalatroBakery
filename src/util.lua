@@ -491,7 +491,7 @@ Bakery_API.guard(function()
         return num
     end
 
-    local function big(x)
+    function Bakery_API.big(x)
         return to_big and type(to_big) == "function" and to_big(x) or x
     end
 
@@ -501,7 +501,7 @@ Bakery_API.guard(function()
             mod = math.min(G.GAME.modifiers.Bakery_Vagabond - G.GAME.dollars, mod)
         end
 
-        if mod == nil or big(mod) <= big(0) or
+        if mod == nil or Bakery_API.big(mod) <= Bakery_API.big(0) or
             (not Bakery_API.no_money_decks[G.GAME.selected_back_key.key or G.GAME.selected_back_key] and
                 not Bakery_API.no_money_decks[G.GAME.selected_sleeve]) then
             return raw_ease_dollars(mod, instant)
