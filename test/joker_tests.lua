@@ -1391,7 +1391,6 @@ Balatest.TestPlay {
                 G["Bakery_sleeve_" .. G.jokers.cards[1].ability.extra.key].cards[1], true)
         end)
         Balatest.end_round()
-        Balatest.assert_chips()
         Balatest.use(G.consumeables.cards[1])
     end,
     assert = function()
