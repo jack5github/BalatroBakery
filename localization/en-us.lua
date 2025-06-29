@@ -285,7 +285,7 @@ return {
         Enhanced = {
             m_Bakery_TimeWalk = {
                 name = "Time Walk",
-                text = { "{C:blue}+#1#{} Hand", "no rank or suit" }
+                text = { "{C:blue}+#1#{} Hand", "No rank or suit" }
             },
             m_Bakery_Curse = {
                 name = "Curse",
