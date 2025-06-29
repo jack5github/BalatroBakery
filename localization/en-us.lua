@@ -269,6 +269,10 @@ return {
                     "Cards with no rank or",
                     "no suit are debuffed"
                 }
+            },
+            bl_Bakery_Lammed = {
+                name = "The Stoic",
+                text = { "Charm is debuffed" }
             }
         },
         Spectral = {
