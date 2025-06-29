@@ -262,6 +262,13 @@ return {
             bl_Bakery_Kaf = {
                 name = "The Build",
                 text = { "No base chips" }
+            },
+            bl_Bakery_Samekh = {
+                name = "The Ruler",
+                text = {
+                    "Cards with no rank or",
+                    "no suit are debuffed"
+                }
             }
         },
         Spectral = {

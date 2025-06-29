@@ -8,13 +8,14 @@ SMODS.Atlas {
 }
 
 SMODS.Blind {
-    key = "Aleph",
+    key = "Aleph", -- The Leader
     atlas = "BakeryBlinds",
     boss = {
         min = 3,
         max = 0
     },
     boss_colour = HEX('a9e74b'),
+    -- -1 Hand, -1 Discard
     set_blind = function(self)
         ease_discard(-1)
         ease_hands_played(-1)
@@ -26,7 +27,7 @@ SMODS.Blind {
 }
 
 SMODS.Blind {
-    key = "Tsadi",
+    key = "Tsadi", -- The Attrition
     atlas = "BakeryBlinds",
     pos = {
         y = 1
@@ -36,6 +37,7 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('ff004b'),
+    -- -(Ante*10) Mult before scoring
     config = {
         extra = {
             scale = 5
@@ -81,7 +83,7 @@ end
 sendInfoMessage("SMODS.never_scores() patched. Reason: The Solo Boss Blind", "Bakery")
 
 SMODS.Blind {
-    key = "He",
+    key = "He", -- The Solo
     atlas = "BakeryBlinds",
     pos = {
         y = 2
@@ -91,10 +93,11 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('ffd78e')
+    -- Only one card scores
 }
 
 SMODS.Blind {
-    key = "Qof",
+    key = "Qof", -- The Witch
     atlas = "BakeryBlinds",
     pos = {
         y = 3
@@ -104,6 +107,7 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('e9b4ff'),
+    -- Adds (Ante) curses to your deck
     collection_loc_vars = function(self)
         return { vars = { localize 'b_Bakery_ante' } }
     end,
@@ -159,7 +163,7 @@ SMODS.Blind {
 }
 
 SMODS.Blind {
-    key = "Kaf",
+    key = "Kaf", -- The Build
     atlas = "BakeryBlinds",
     pos = {
         y = 4
@@ -169,7 +173,32 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('93a9ff'),
+    -- No base chips
     modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)
         return mult, 0, hand_chips ~= 0
     end
+}
+
+-- TODO: Add crediting to blinds
+SMODS.Blind {
+    key = "Samekh", -- The Ruler
+    atlas = "BakeryBlinds",
+    pos = {
+        y = 5
+    },
+    boss = {
+        min = 3,
+        max = 0
+    },
+    boss_colour = HEX('ffc201'),
+    -- Cards with no rank or no suit are debuffed
+    recalc_debuff = function(self, card, from_blind)
+        if not G.GAME.blind.disabled and card.area ~= G.jokers and (
+                SMODS.has_no_rank(card) or SMODS.has_no_suit(card)
+            ) then
+            return true -- Debuffed
+        end
+        return false
+    end
+    -- Programmed by Jack5
 }

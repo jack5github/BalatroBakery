@@ -153,3 +153,5 @@ Balatest.TestPlay {
         Balatest.assert_chips(7)
     end
 }
+
+-- TODO: Add test for The Ruler
