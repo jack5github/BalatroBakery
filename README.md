@@ -38,4 +38,5 @@ If another mod depends on Bakery, but you do not want Bakery's additions, you ca
 
 ## Other Contributors
 
-Thanks to GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord for some of the artwork used.
+- GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord - Some of the artwork used
+- Jack5 - Some coding and artwork
