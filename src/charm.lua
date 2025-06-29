@@ -1201,3 +1201,44 @@ if next(SMODS.find_mod 'Cryptid') then
         end
     })
 end
+
+if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
+    Bakery_API.credit(Bakery_API.Charm {
+        key = 'Virus',
+        pos = {
+            x = 4,
+            y = 2
+        },
+        atlas = 'Charms',
+        coder = 'Jack5',
+        unlocked = true, -- TODO: Create unlock condition
+        calculate = function(self, card, context)
+            if context.after and #G.hand.cards >= 1 then
+                local uninfected_cards = {}
+                for i = 1, #G.hand.cards do
+                    if G.hand.cards[i].ability.name ~= 'm_garb_infected' then
+                        table.insert(uninfected_cards, G.hand.cards[i])
+                    end
+                end
+                if #uninfected_cards == 0 then
+                    return
+                end
+                local infect_card = uninfected_cards[math.random(#uninfected_cards)]
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0,
+                    func = function()
+                        infect_card:set_ability(G.P_CENTERS['m_garb_infected'])
+                        infect_card.justinfected = true -- Unused, also set by Garbshit
+                        play_sound('garb_infect', 0.9 + (math.random() * 0.1), 0.8)
+                        G.Bakery_charm_area.cards[1]:juice_up(0.3, 0.4)
+                        infect_card:juice_up(0.3, 0.4)
+                        return true
+                    end
+                }))
+                delay(0.6)
+                return
+            end
+        end
+    })
+end
