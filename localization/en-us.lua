@@ -426,18 +426,18 @@ return {
             Bakery_Carbon = "Carbon"
         },
         poker_hands = {
-            Bakery_StuffedHouse = "Stuffed House",              -- Full House of suits & Full House of ranks
-            Bakery_StuffedFlush = "Stuffed Flush",              -- Full House of suits & Full House of ranks & Flush (Possible with wild cards)
-            Bakery_StraightHouse = "Straight House",            -- Straight & Full House
-            Bakery_StraightFlushHouse = "Straight Flush House", -- Straight Flush & Flush House
-            Bakery_RoyalFlushHouse = "Royal Flush House",       -- Royal Flush & Flush House
-            Bakery_SixOfAKind = "Six Of A Kind",                -- Five of a Kind & 6 cards
-            Bakery_FlushSix = "Flush Six",                      -- Flush & Five of a Kind & 6 cards
-            Bakery_ThreePair = "Three Pair",                    -- 3X Pair
-            Bakery_FlushThreePair = "Flush Three Pair",         -- Flush & 3X Pair
-            Bakery_TwoTriplets = "Two Triplets",                -- 2X Thee of a Kind
-            Bakery_FlushTriplets = "Flush Triplets",            -- Flush & 2X Thee of a Kind
-            Bakery_FlushMansion = "Flush Mansion"               -- Flush & Four of a Kind & Pair
+            Bakery_StuffedHouse = "Stuffed House",      -- Full House of suits & Full House of ranks
+            Bakery_StuffedFlush = "Stuffed Flush",      -- Full House of suits & Full House of ranks & Flush (Possible with wild cards)
+            Bakery_StraightHouse = "Harem",             -- Straight & Full House
+            Bakery_StraightFlushHouse = "Flush Harem",  -- Straight Flush & Flush House
+            Bakery_RoyalFlushHouse = "Royal Harem",     -- Royal Flush & Flush House
+            Bakery_SixOfAKind = "Six Of A Kind",        -- Five of a Kind & 6 cards
+            Bakery_FlushSix = "Flush Six",              -- Flush & Five of a Kind & 6 cards
+            Bakery_ThreePair = "Three Pair",            -- 3X Pair
+            Bakery_FlushThreePair = "Flush Three Pair", -- Flush & 3X Pair
+            Bakery_TwoTriplets = "Two Triplets",        -- 2X Thee of a Kind
+            Bakery_FlushTriplets = "Flush Triplets",    -- Flush & 2X Thee of a Kind
+            Bakery_FlushMansion = "Flush Mansion"       -- Flush & Four of a Kind & Pair
         }
         -- KEEP_LITE
     }
