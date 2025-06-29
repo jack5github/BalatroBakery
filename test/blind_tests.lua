@@ -154,4 +154,19 @@ Balatest.TestPlay {
     end
 }
 
--- TODO: Add test for The Ruler
+Balatest.TestPlay {
+    name = 'ruler',
+    category = { 'blinds', 'ruler' },
+
+    blind = 'bl_Bakery_Samekh',
+    deck = { cards = {
+        { r = '2', s = 'C', e = 'm_stone' },
+        { r = '2', s = 'D', e = 'm_stone' }, -- Prevent game over from no cards
+    } },
+    execute = function()
+        Balatest.play_hand { '2C' }
+    end,
+    assert = function()
+        Balatest.assert_chips(5)
+    end
+}

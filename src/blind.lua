@@ -179,7 +179,6 @@ SMODS.Blind {
     end
 }
 
--- TODO: Add crediting to blinds
 SMODS.Blind {
     key = "Samekh", -- The Ruler
     atlas = "BakeryBlinds",
@@ -191,6 +190,10 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('ffc201'),
+    --[[
+    artist = Jack5,
+    coder = Jack5,
+    ]]
     -- Cards with no rank or no suit are debuffed
     recalc_debuff = function(self, card, from_blind)
         if not G.GAME.blind.disabled and card.area ~= G.jokers and (
@@ -200,5 +203,4 @@ SMODS.Blind {
         end
         return false
     end
-    -- Programmed by Jack5
 }
