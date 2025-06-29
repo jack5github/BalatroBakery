@@ -292,7 +292,7 @@ return {
         Enhanced = {
             m_Bakery_TimeWalk = {
                 name = "Time Walk",
-                text = { "{C:blue}+#1#{} Hand", "no rank or suit" }
+                text = { "{C:blue}+#1#{} Hand", "No rank or suit" }
             },
             m_Bakery_Curse = {
                 name = "Curse",
@@ -427,7 +427,8 @@ return {
         v_dictionary = {
             b_Bakery_deposit = "DEPOSIT $#1#",
             b_Bakery_ante_times = "(Ante*#1#)",
-            v_Bakery_artist = "Artist: #1#"
+            v_Bakery_artist = "Artist: #1#",
+            v_Bakery_coder = "Coder: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"

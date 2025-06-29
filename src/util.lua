@@ -739,13 +739,23 @@ Bakery_API.guard(function()
     function Bakery_API.credit(obj)
         local raw_obj_set_badges = obj.set_badges
         obj.set_badges = function(self, card, badges)
-            if self.artist and (self.set == "Enhanced" or self.discovered or card.bypass_discovery_center) then
-                local artist = Bakery_API.contributors[self.artist]
-                badges[#badges + 1] = create_badge(localize {
-                    type = 'variable',
-                    key = 'v_Bakery_artist',
-                    vars = { artist.name }
-                }, artist.bg or G.C.RED, artist.fg or G.C.BLACK, 0.7)
+            if self.set == "Enhanced" or self.discovered or card.bypass_discovery_center then
+                if self.artist then
+                    local artist = Bakery_API.contributors[self.artist]
+                    badges[#badges + 1] = create_badge(localize {
+                        type = 'variable',
+                        key = 'v_Bakery_artist',
+                        vars = { artist.name }
+                    }, artist.bg or G.C.RED, artist.fg or G.C.BLACK, 0.7)
+                end
+                if self.coder then
+                    local coder = Bakery_API.contributors[self.coder]
+                    badges[#badges + 1] = create_badge(localize {
+                        type = 'variable',
+                        key = 'v_Bakery_coder',
+                        vars = { coder.name }
+                    }, coder.bg or G.C.RED, coder.fg or G.C.BLACK, 0.7)
+                end
             end
             if raw_obj_set_badges then
                 raw_obj_set_badges(self, card, badges)
