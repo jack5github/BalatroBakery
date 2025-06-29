@@ -1213,6 +1213,7 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
         artist = 'Jack5',
         coder = 'Jack5',
         unlocked = true, -- TODO: Create unlock condition
+        discovered = false,
         calculate = function(self, card, context)
             if context.after and #G.hand.cards >= 1 then
                 local uninfected_cards = {}
