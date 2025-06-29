@@ -1210,6 +1210,7 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
             y = 2
         },
         atlas = 'Charms',
+        artist = 'Jack5',
         coder = 'Jack5',
         unlocked = true, -- TODO: Create unlock condition
         calculate = function(self, card, context)
