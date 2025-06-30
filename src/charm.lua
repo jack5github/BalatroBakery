@@ -608,7 +608,8 @@ SMODS.PokerHand:take_ownership("Flush House", {
         return Bakery_API.maximus_full_house_compat(parts, val, true)
     end,
     modify_display_text = function(cards, scoring_hand)
-        if #G.Bakery_charm_area.cards >= 1 and not G.Bakery_charm_area.cards[1].debuff then
+        if G.Bakery_charm_area and #G.Bakery_charm_area.cards >= 1
+            and not G.Bakery_charm_area.cards[1].debuff then
             if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #scoring_hand == 5 then
                 local dup = scoring_hand[1]
                 local x = scoring_hand[1].T.x
@@ -720,7 +721,8 @@ SMODS.PokerHand:take_ownership("Full House", {
         return Bakery_API.maximus_full_house_compat(parts, val)
     end,
     modify_display_text = function(cards, scoring_hand)
-        if #G.Bakery_charm_area.cards >= 1 and not G.Bakery_charm_area.cards[1].debuff then
+        if G.Bakery_charm_area and #G.Bakery_charm_area.cards >= 1
+            and not G.Bakery_charm_area.cards[1].debuff then
             if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
                 #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
                 #get_X_same(2, scoring_hand, true) >= 2 then
