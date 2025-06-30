@@ -384,6 +384,18 @@ return {
                     "{C:attention}Jokers{} don't appear",
                     "{C:red}Cannot be removed"
                 }
+            },
+            BakeryCharm_Bakery_Virus = {
+                name = "Virus",
+                text = {
+                    "{C:green}Infect{} random uninfected",
+                    "card in hand after scoring"
+                },
+                unlock = {
+                    "Have at least {C:attention}#1#",
+                    "{C:green}Infected Cards",
+                    "active in total"
+                }
             }
             -- KEEP_LITE
         },

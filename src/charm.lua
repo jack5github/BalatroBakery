@@ -1241,3 +1241,66 @@ if next(SMODS.find_mod 'Cryptid') then
         end
     })
 end
+
+if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
+    Bakery_API.credit(Bakery_API.Charm {
+        key = 'Virus',
+        pos = {
+            x = 4,
+            y = 2
+        },
+        atlas = 'Charms',
+        artist = 'Jack5',
+        coder = 'Jack5',
+        unlocked = false,
+        -- TODO: Fix "ERROR" displaying in right pane when unlocking
+        locked_loc_vars = function(info_queue, card)
+            return {
+                vars = { 6 }
+            }
+        end,
+        calculate = function(self, card, context)
+            if context.after and not card.debuff and #G.hand.cards >= 1 then
+                local uninfected_cards = {}
+                for i = 1, #G.hand.cards do
+                    if G.hand.cards[i].ability.name ~= 'm_garb_infected' then
+                        table.insert(uninfected_cards, G.hand.cards[i])
+                    end
+                end
+                if #uninfected_cards == 0 then
+                    return
+                end
+                local infect_card = uninfected_cards[math.random(#uninfected_cards)]
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0,
+                    func = function()
+                        infect_card:set_ability(G.P_CENTERS['m_garb_infected'])
+                        infect_card.justinfected = true -- Unused, also set by Garbshit
+                        play_sound('garb_infect', 0.9 + (math.random() * 0.1), 0.8)
+                        G.Bakery_charm_area.cards[1]:juice_up(0.3, 0.4)
+                        infect_card:juice_up(0.3, 0.4)
+                        return true
+                    end
+                }))
+                delay(0.6)
+                return
+            end
+        end,
+        check_for_unlock = function(self, args)
+            local required_infected = 6 -- On change: update locked_loc_vars
+            if G.playing_cards and #G.playing_cards >= required_infected then
+                local infected_count = 0
+                for i = 1, #G.playing_cards do
+                    if G.playing_cards[i].ability.name == 'm_garb_infected' then
+                        infected_count = infected_count + 1
+                        if infected_count >= required_infected then
+                            return true
+                        end
+                    end
+                end
+            end
+        end
+        -- TODO: Add in_pool function
+    })
+end
