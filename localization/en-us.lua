@@ -370,14 +370,14 @@ return {
             },
             BakeryCharm_Bakery_Marm = {
                 name = "Marm",
-                text = { "Every hand is a {C:attention}Pair{},", "Every {C:attention}played card", "counts in scoring" },
+                text = { "Every hand is a {C:attention}Pair{}", "Every {C:attention}played card", "counts in scoring" },
                 unlock = { "Win a run with", "only {C:attention}Pair{} hands" }
             },
             BakeryCharm_Bakery_DuctTape = {
                 name = "Duct Tape",
                 text = {
                     "{C:common}Common{} and {C:uncommon}Uncommon",
-                    "{C:attention}Jokers{} don't appear,",
+                    "{C:attention}Jokers{} don't appear",
                     "{C:red}Cannot be removed"
                 }
             }
@@ -386,11 +386,11 @@ return {
         Other = {
             Bakery_charm = {
                 name = "Charm",
-                text = { "Only one charm may", "be equipped at a time,", "purchasing a new charm", "replaces an old one" }
+                text = { "Only one Charm may", "be equipped at a time", "Purchasing a new Charm", "replaces an old one" }
             },
             undiscovered_bakerycharm = {
                 name = "Undiscovered",
-                text = { "Equip this charm", "in an unseeded run", "to learn what it does" }
+                text = { "Equip this Charm", "in an unseeded run", "to learn what it does" }
             }
         }
     },
@@ -418,8 +418,8 @@ return {
             b_Bakery_double_tags = "Double Tags",
             -- KEEP_LITE
             k_bakerycharm = "Charm",
-            k_BakeryCharmInfo = { "Only one charm may be equipped at a time,",
-                "purchasing a new charm replaces an old one." },
+            k_BakeryCharmInfo = { "Only one Charm may be equipped at a time",
+                "purchasing a new Charm replaces an old one." },
             b_Bakery_equip = "EQUIP",
             b_Bakery_ante = "(Ante)"
         },
