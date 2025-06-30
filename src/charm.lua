@@ -1220,7 +1220,7 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
             }
         end,
         calculate = function(self, card, context)
-            if context.after and #G.hand.cards >= 1 then
+            if context.after and not card.debuff and #G.hand.cards >= 1 then
                 local uninfected_cards = {}
                 for i = 1, #G.hand.cards do
                     if G.hand.cards[i].ability.name ~= 'm_garb_infected' then
