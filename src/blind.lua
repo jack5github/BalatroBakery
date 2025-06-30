@@ -204,3 +204,29 @@ SMODS.Blind {
         return false
     end
 }
+
+sendInfoMessage("Blind:set_blind() patched. Reason: Allow Charms to be debuffed")
+
+SMODS.Blind {
+    key = "Lammed", -- The Stoic
+    atlas = "BakeryBlinds",
+    pos = {
+        y = 6
+    },
+    boss = {
+        min = 3,
+        max = 0
+    },
+    boss_colour = HEX('4b514a'),
+    --[[
+    artist = Jack5,
+    coder = Jack5,
+    ]]
+    -- Charm is debuffed
+    recalc_debuff = function(self, card, from_blind)
+        if not G.GAME.blind.disabled and card.area == G.Bakery_charm_area then
+            return true -- Debuffed
+        end
+        return false
+    end
+}

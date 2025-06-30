@@ -170,3 +170,5 @@ Balatest.TestPlay {
         Balatest.assert_chips(5)
     end
 }
+
+-- TODO: Add test for The Stoic
