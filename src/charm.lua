@@ -1270,14 +1270,14 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
                 if #uninfected_cards == 0 then
                     return
                 end
-                local infect_card = uninfected_cards[math.random(#uninfected_cards)]
+                local infect_card = pseudorandom_element(uninfected_cards, pseudoseed('TrashHumor'))
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after',
                     delay = 0,
                     func = function()
                         infect_card:set_ability(G.P_CENTERS['m_garb_infected'])
                         infect_card.justinfected = true -- Unused, also set by Garbshit
-                        play_sound('garb_infect', 0.9 + (math.random() * 0.1), 0.8)
+                        play_sound('garb_infect', 0.9 + math.random() * 0.1, 0.8)
                         G.Bakery_charm_area.cards[1]:juice_up(0.3, 0.4)
                         infect_card:juice_up(0.3, 0.4)
                         return true
