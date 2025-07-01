@@ -402,7 +402,7 @@ return {
         Other = {
             Bakery_charm = {
                 name = "Charm",
-                text = { "Only one Charm may", "be equipped at a time", "Purchasing a new Charm", "replaces an old one" }
+                text = { "Only one charm may", "be equipped at a time,", "purchasing a new charm", "replaces an old one" }
             },
             undiscovered_bakerycharm = {
                 name = "Undiscovered",
