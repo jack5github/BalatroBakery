@@ -217,7 +217,7 @@ SMODS.Blind {
         min = 3,
         max = 0
     },
-    boss_colour = HEX('4b514a'),
+    boss_colour = HEX('5a6159'),
     --[[
     artist = Jack5,
     coder = Jack5,
