@@ -420,8 +420,8 @@ return {
         v_dictionary = {
             b_Bakery_deposit = "DEPOSIT $#1#",
             b_Bakery_ante_times = "(Ante*#1#)",
-            v_Bakery_artist = "Artist: #1#",
-            v_Bakery_coder = "Coder: #1#"
+            v_Bakery_artist = "Art: #1#",
+            v_Bakery_coder = "Code: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"
