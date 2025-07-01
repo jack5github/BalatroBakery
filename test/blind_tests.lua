@@ -170,5 +170,22 @@ Balatest.TestPlay {
         Balatest.assert_chips(5)
     end
 }
+Balatest.TestPlay {
+    name = 'ruler_chicot',
+    category = { 'blinds', 'ruler' },
+
+    blind = 'bl_Bakery_Samekh',
+    jokers = { 'j_chicot' },
+    deck = { cards = {
+        { r = '2', s = 'C', e = 'm_stone' },
+        { r = '2', s = 'D', e = 'm_stone' }, -- Prevent game over from no cards
+    } },
+    execute = function()
+        Balatest.play_hand { '2C' }
+    end,
+    assert = function()
+        Balatest.assert_chips(55)
+    end
+}
 
 -- TODO: Add test for The Stoic
