@@ -23,7 +23,7 @@ Current contents:
 
 With certain other mods installed, Bakery will add extra items:
 - [Revo's Vault](https://github.com/Cdrvo/Revos-Vault---Balatro-Mod) - 1 Charm
-- [MoreFluff](https://github.com/notmario/MoreFluff) - 1 Charm
+- [MoreFluff](https://github.com/notmario/MoreFluff) - 1 Charm, 4 DX Boss Blinds
 - [Cryptid](https://github.com/SpectralPack/Cryptid) - 2 Charms
 
 ## Installation

@@ -247,9 +247,20 @@ return {
                 name = "The Leader",
                 text = { "-1 Hand", "-1 Discard" }
             },
+            bl_Bakery_AlephDX = {
+                name = "The Leader DX",
+                text = { "-2 Hand", "-2 Discard" }
+            },
             bl_Bakery_Tsadi = {
                 name = "The Attrition",
                 text = { "{C:red}-#1#{} Mult", "before scoring" }
+            },
+            bl_Bakery_TsadiDX = {
+                name = "The Attrition DX",
+                text = {
+                    "{C:red}-#1#{} {C:chips}Chips{} and",
+                    "{C:red}-#1#{} {C:mult}Mult{} before scoring"
+                }
             },
             bl_Bakery_He = {
                 name = "The Solo",
@@ -261,13 +272,24 @@ return {
             },
             bl_Bakery_Kaf = {
                 name = "The Build",
-                text = { "No base chips" }
+                text = { "No base Chips" }
+            },
+            bl_Bakery_KafDX = {
+                name = "The Build DX",
+                text = { "No base Chips or Mult" }
             },
             bl_Bakery_Samekh = {
                 name = "The Ruler",
                 text = {
                     "Cards with no rank or",
                     "no suit are debuffed"
+                }
+            },
+            bl_Bakery_SamekhDX = {
+                name = "The Ruler DX",
+                text = {
+                    "Cards with no rank or no suit plus",
+                    "face cards and Aces are debuffed"
                 }
             },
             bl_Bakery_Lammed = {
