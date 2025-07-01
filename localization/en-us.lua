@@ -401,7 +401,7 @@ return {
         Other = {
             Bakery_charm = {
                 name = "Charm",
-                text = { "Only one charm may", "be equipped at a time,", "purchasing a new charm", "replaces an old one" }
+                text = { "Only one Charm may", "be equipped at a time,", "purchasing a new Charm", "replaces an old one" }
             },
             undiscovered_bakerycharm = {
                 name = "Undiscovered",
@@ -442,8 +442,8 @@ return {
         v_dictionary = {
             b_Bakery_deposit = "DEPOSIT $#1#",
             b_Bakery_ante_times = "(Ante*#1#)",
-            v_Bakery_artist = "Artist: #1#",
-            v_Bakery_coder = "Coder: #1#"
+            v_Bakery_artist = "Art: #1#",
+            v_Bakery_coder = "Code: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"
