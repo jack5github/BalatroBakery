@@ -1213,12 +1213,6 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
         artist = 'Jack5',
         coder = 'Jack5',
         unlocked = false,
-        -- TODO: Fix "ERROR" displaying in right pane when unlocking
-        locked_loc_vars = function(info_queue, card)
-            return {
-                vars = { 6 }
-            }
-        end,
         calculate = function(self, card, context)
             if context.after and not card.debuff and #G.hand.cards >= 1 then
                 local uninfected_cards = {}
@@ -1248,19 +1242,14 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
             end
         end,
         check_for_unlock = function(self, args)
-            local required_infected = 6 -- On change: update locked_loc_vars
-            if G.playing_cards and #G.playing_cards >= required_infected then
-                local infected_count = 0
+            if G.playing_cards then
                 for i = 1, #G.playing_cards do
-                    if G.playing_cards[i].ability.name == 'm_garb_infected' then
-                        infected_count = infected_count + 1
-                        if infected_count >= required_infected then
-                            return true
-                        end
+                    if G.playing_cards[i].ability.name ~= 'm_garb_infected' then
+                        return false
                     end
                 end
+                return true
             end
         end
-        -- TODO: Add in_pool function
     })
 end

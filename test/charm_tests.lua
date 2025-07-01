@@ -939,5 +939,23 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
             Balatest.assert_eq(G.hand.cards[1].ability.name, 'm_garb_infected')
         end
     }
+    Balatest.TestPlay {
+        name = 'virus_enhanced',
+        category = { 'charms', 'virus', 'garbshit' },
+
+        deck = { cards = {
+            { r = '5', s = 'D', e = 'm_wild' },
+            { r = 'A', s = 'S', e = 'm_wild' }
+        } },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Virus'
+            Balatest.play_hand { '5D' }
+            Balatest.wait_for_input()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.hand.cards, 1)
+            Balatest.assert_eq(G.hand.cards[1].ability.name, 'm_garb_infected')
+        end
+    }
     --#endregion
 end
