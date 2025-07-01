@@ -392,9 +392,8 @@ return {
                     "card in hand after scoring"
                 },
                 unlock = {
-                    "Have at least {C:attention}#1#",
-                    "{C:green}Infected Cards",
-                    "active in total"
+                    "Have {C:attention}all{} cards in deck",
+                    "be {C:green}Infected Cards",
                 }
             }
             -- KEEP_LITE
