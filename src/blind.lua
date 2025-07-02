@@ -191,8 +191,9 @@ SMODS.Blind {
     },
     boss_colour = HEX('eaba23'),
     --[[
-    artist = Jack5,
-    coder = Jack5,
+    artist = 'Jack5',
+    coder = 'Jack5',
+    idea = 'Jack5',
     ]]
     -- Cards with no rank or no suit are debuffed
     recalc_debuff = function(self, card, from_blind)
@@ -219,8 +220,9 @@ SMODS.Blind {
     },
     boss_colour = HEX('5a6159'),
     --[[
-    artist = Jack5,
-    coder = Jack5,
+    artist = 'Jack5',
+    coder = 'Jack5',
+    idea = 'Jack5',
     ]]
     -- Charm is debuffed
     recalc_debuff = function(self, card, from_blind)

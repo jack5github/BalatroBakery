@@ -756,6 +756,14 @@ Bakery_API.guard(function()
                         vars = { coder.name }
                     }, coder.bg or G.C.RED, coder.fg or G.C.BLACK, 0.7)
                 end
+                if self.idea then
+                    local coder = Bakery_API.contributors[self.idea]
+                    badges[#badges + 1] = create_badge(localize {
+                        type = 'variable',
+                        key = 'v_Bakery_idea',
+                        vars = { coder.name }
+                    }, coder.bg or G.C.RED, coder.fg or G.C.BLACK, 0.7)
+                end
             end
             if raw_obj_set_badges then
                 raw_obj_set_badges(self, card, badges)

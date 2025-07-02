@@ -1252,6 +1252,7 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
         atlas = 'Charms',
         artist = 'Jack5',
         coder = 'Jack5',
+        idea = 'Jack5',
         unlocked = false,
         loc_vars = function(self, info_queue, card)
             info_queue[#info_queue + 1] = G.P_CENTERS['m_garb_infected']
