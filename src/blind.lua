@@ -195,12 +195,10 @@ Bakery_API.credit(SMODS.Blind {
     idea = 'Jack5',
     -- Cards with no rank or no suit are debuffed
     recalc_debuff = function(self, card, from_blind)
-        if not G.GAME.blind.disabled and card.area ~= G.jokers and (
-                SMODS.has_no_rank(card) or SMODS.has_no_suit(card)
-            ) then
-            return true -- Debuffed
-        end
-        return false
+        return
+            not G.GAME.blind.disabled and
+            card.area ~= G.jokers and
+            (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))
     end
 })
 
@@ -222,9 +220,6 @@ Bakery_API.credit(SMODS.Blind {
     idea = 'Jack5',
     -- Charm is debuffed
     recalc_debuff = function(self, card, from_blind)
-        if not G.GAME.blind.disabled and card.area == G.Bakery_charm_area then
-            return true -- Debuffed
-        end
-        return false
+        return not G.GAME.blind.disabled and card.area == G.Bakery_charm_area
     end
 })
