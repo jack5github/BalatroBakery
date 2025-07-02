@@ -469,7 +469,8 @@ return {
             b_Bakery_ante_times = "(Ante*#1#)",
             v_Bakery_artist = "Art: #1#",
             v_Bakery_coder = "Code: #1#",
-            v_Bakery_idea = "Idea: #1#"
+            v_Bakery_idea = "Idea: #1#",
+            v_Bakery_by = "Made by: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"

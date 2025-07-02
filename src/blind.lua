@@ -179,7 +179,7 @@ SMODS.Blind {
     end
 }
 
-SMODS.Blind {
+Bakery_API.credit(SMODS.Blind {
     key = "Samekh", -- The Ruler
     atlas = "BakeryBlinds",
     pos = {
@@ -190,11 +190,9 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('eaba23'),
-    --[[
     artist = 'Jack5',
     coder = 'Jack5',
     idea = 'Jack5',
-    ]]
     -- Cards with no rank or no suit are debuffed
     recalc_debuff = function(self, card, from_blind)
         if not G.GAME.blind.disabled and card.area ~= G.jokers and (
@@ -204,11 +202,11 @@ SMODS.Blind {
         end
         return false
     end
-}
+})
 
 sendInfoMessage("Blind:set_blind() patched. Reason: Allow Charms to be debuffed")
 
-SMODS.Blind {
+Bakery_API.credit(SMODS.Blind {
     key = "Lammed", -- The Stoic
     atlas = "BakeryBlinds",
     pos = {
@@ -219,11 +217,9 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('5a6159'),
-    --[[
     artist = 'Jack5',
     coder = 'Jack5',
     idea = 'Jack5',
-    ]]
     -- Charm is debuffed
     recalc_debuff = function(self, card, from_blind)
         if not G.GAME.blind.disabled and card.area == G.Bakery_charm_area then
@@ -231,4 +227,4 @@ SMODS.Blind {
         end
         return false
     end
-}
+})
