@@ -1245,7 +1245,7 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
             end
         end,
         check_for_unlock = function(self, args)
-            if G.playing_cards then
+            if G.playing_cards and #G.playing_cards >= 1 then
                 for i = 1, #G.playing_cards do
                     if G.playing_cards[i].ability.name ~= 'm_garb_infected' then
                         return false
