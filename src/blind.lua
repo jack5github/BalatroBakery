@@ -37,7 +37,7 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('ff004b'),
-    -- -(Ante*10) Mult before scoring
+    -- -(Ante*5) Mult before scoring
     config = {
         extra = {
             scale = 5
