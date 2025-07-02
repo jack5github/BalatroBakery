@@ -808,7 +808,7 @@ Bakery_API.guard(function()
         local raw_obj_set_badges = obj.set_badges
         obj.set_badges = function(self, card, badges)
             if self.set == "Enhanced" or self.discovered or card.bypass_discovery_center then
-                if self.artist == self.coder and self.coder == self.idea then
+                if self.artist and self.artist == self.coder and self.coder == self.idea then
                     local creator = Bakery_API.contributors[self.artist]
                     badges[#badges + 1] = create_badge(localize {
                         type = 'variable',
