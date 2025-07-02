@@ -199,6 +199,18 @@ Bakery_API.credit(SMODS.Blind {
             not G.GAME.blind.disabled and
             card.area ~= G.jokers and
             (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))
+    end,
+    in_pool = function()
+        local count = 0
+        for i = 1, #G.playing_cards do
+            if SMODS.has_no_rank(G.playing_cards[i]) or SMODS.has_no_suit(G.playing_cards[i]) then
+                count = count + 1
+                if count >= #G.playing_cards / 6 then
+                    return true
+                end
+            end
+        end
+        return false
     end
 })
 
