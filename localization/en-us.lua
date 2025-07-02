@@ -289,7 +289,7 @@ return {
                 name = "The Ruler",
                 text = {
                     "Cards with no rank or",
-                    "no suit are debuffed"
+                    "suit are debuffed"
                 }
             },
             bl_Bakery_Lammed = {
@@ -413,12 +413,11 @@ return {
             BakeryCharm_Bakery_Virus = {
                 name = "Virus",
                 text = {
-                    "{C:green}Infect{} random uninfected",
-                    "card in hand after scoring"
+                    "{C:green}Infects{} a random uninfected",
+                    "card held in hand after scoring"
                 },
                 unlock = {
-                    "Have {C:attention}all{} cards in deck",
-                    "be {C:green}Infected Cards",
+                    "Have {C:attention}only {C:green}Infected Cards",
                 }
             }
             -- KEEP_LITE
