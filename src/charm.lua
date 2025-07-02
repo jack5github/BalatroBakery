@@ -739,10 +739,14 @@ Bakery_API.Charm {
     atlas = 'Charms'
 }
 
+local function can_discard_zero()
+    return G.GAME.current_round.discards_left > 0 and #G.hand.highlighted <= 0 and
+        (G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Rune' or G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Obsession')
+end
+
 local raw_G_FUNCS_can_discard = G.FUNCS.can_discard
 function G.FUNCS.can_discard(e)
-    if G.GAME.current_round.discards_left > 0 and #G.hand.highlighted <= 0 and
-        (G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Rune' or G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Obsession') then
+    if can_discard_zero() then
         e.config.colour = G.C.RED
         e.config.button = 'Bakery_discard_zero'
     else
@@ -753,9 +757,7 @@ end
 sendInfoMessage("G.FUNCS.can_discard() patched. Reason: Discarding zero cards", "Bakery")
 
 G.FUNCS.Bakery_discard_zero = function(e)
-    if #G.Bakery_charm_area.cards == 0 or not G.GAME.Bakery_charm then
-        return
-    end
+    if can_discard_zero() then return end
 
     stop_use()
     G.CONTROLLER.interrupt.focus = true
