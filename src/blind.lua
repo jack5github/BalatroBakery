@@ -295,7 +295,7 @@ if next(SMODS.find_mod "MoreFluff") and SMODS.Mods["MoreFluff"].config
         artist = Jack5,
         coder = Jack5,
         ]]
-        -- -(Ante*20) Mult before scoring
+        -- -(Ante*10) Mult before scoring
         config = {
             extra = {
                 scale = 10
