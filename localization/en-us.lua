@@ -19,8 +19,12 @@ return {
             },
             j_Bakery_Werewolf = {
                 name = 'Werewolf (Day)',
-                text = { "{X:mult,C:white}X#1#{} Mult", "{C:attention}Transform{} this Joker", "at end of round",
-                    "if {C:attention}no discards{} were used" }
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:attention}Transform{} this Joker",
+                    "at end of round if",
+                    "{C:attention}no discards{} were used"
+                }
             },
             j_Bakery_Werewolf_Back = {
                 name = 'Werewolf (Night)',
@@ -34,8 +38,11 @@ return {
             },
             j_Bakery_Proxy = {
                 name = "Proxy",
-                text = { "Copies ability of", "most recently", "purchased {C:attention}Joker{}",
-                    "{C:inactive}(Currently {C:attention}#1#{C:inactive})" },
+                text = {
+                    "Copies ability of most",
+                    "recently purchased {C:attention}Joker{}",
+                    "{C:inactive}(Currently {C:attention}#1#{C:inactive})"
+                },
                 unlock = { "Have {C:attention}#1#", "and {C:attention}#2#", "simultaneously" }
             },
             j_Bakery_StickerSheet = {
@@ -55,8 +62,11 @@ return {
             },
             j_Bakery_EvilSteven = {
                 name = "Evil Steven",
-                text = { "{C:red}Destroys{} all scored cards", "with {C:attention}even{} rank",
-                    "{C:inactive}(2, 4, 6, 8, 10)" }
+                text = {
+                    "{C:red}Destroys{} all scored cards",
+                    "with {C:attention}even{} rank",
+                    "{C:inactive}(2, 4, 6, 8, 10)"
+                }
             },
             j_Bakery_AwfulTodd = {
                 name = "Awful Todd",
@@ -65,9 +75,11 @@ return {
             },
             j_Bakery_JokerAgainstHumanity = {
                 name = "Joker Against Humanity",
-                text = { "Gains {C:mult}+#1#{} Mult", "when played {C:attention}poker",
-                    "{C:attention}hand{} is {C:attention}level 1{}",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}" }
+                text = {
+                    "Gains {C:mult}+#1#{} Mult when played",
+                    "{C:attention}poker hand{} is {C:attention}level 1{}",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult){}"
+                }
             },
             j_Bakery_CardSleeve = {
                 name = "Card Sleeve",
@@ -94,8 +106,11 @@ return {
             },
             j_Bakery_GetOutOfJailFreeCard = {
                 name = "Get Out of Jail Free Card",
-                text = { "{C:attention}Use{} to get {X:mult,C:white}X#1#{} Mult", "for {C:attention}one hand",
-                    "{C:inactive}This card may be kept", "{C:inactive}until needed or sold" }
+                text = {
+                    "{C:attention}Use{} to get {X:mult,C:white}X#1#{} Mult for {C:attention}one hand",
+                    "{C:inactive}This card may be kept",
+                    "{C:inactive}until needed or sold"
+                }
             },
             j_Bakery_TransparentBackBuffer = {
                 name = "Transparent Back Buffer",
@@ -125,8 +140,12 @@ return {
             },
             tag_Bakery_ChocolateTag = {
                 name = "Chocolate Tag",
-                text = { "Gives {C:chips}+#1# Chips{} and {C:mult}+#2# Mult{} when scored",
-                    "{C:chips}-#3# Chips{} and {C:mult}-#4# Mult{0} for every hand played" }
+                text = {
+                    "Gives {C:chips}+#1# Chips{} and",
+                    "{C:mult}+#2# Mult{} when scored",
+                    "{C:chips}-#3# Chips{} and {C:mult}-#4# Mult{0}",
+                    "for every hand played"
+                }
             },
             tag_Bakery_PolyTag = {
                 name = "Poly Tag",
@@ -257,11 +276,14 @@ return {
             },
             bl_Bakery_Qof = {
                 name = "The Witch",
-                text = { "Adds {C:attention}#1#", "{C:purple}Curses{} to your deck" }
+                text = {
+                    "Adds {C:attention}#1#{} {C:purple}Curses",
+                    "to your deck"
+                }
             },
             bl_Bakery_Kaf = {
                 name = "The Build",
-                text = { "No base chips" }
+                text = { "No base Chips" }
             }
         },
         Spectral = {
@@ -271,7 +293,10 @@ return {
             },
             c_Bakery_TimeMachine = {
                 name = "Time Machine",
-                text = { "Enhances {C:attention}#1#{} selected", "card into a", "{C:attention}#2#" }
+                text = {
+                    "Enhances {C:attention}#1#{} selected",
+                    "card into a {C:attention}#2#"
+                }
             }
         },
         Tarot = {
@@ -390,7 +415,7 @@ return {
         Other = {
             Bakery_charm = {
                 name = "Charm",
-                text = { "Only one Charm may", "be equipped at a time", "Purchasing a new Charm", "replaces an old one" }
+                text = { "Only one Charm may", "be equipped at a time,", "purchasing a new Charm", "replaces an old one" }
             },
             undiscovered_bakerycharm = {
                 name = "Undiscovered",
@@ -431,8 +456,8 @@ return {
         v_dictionary = {
             b_Bakery_deposit = "DEPOSIT $#1#",
             b_Bakery_ante_times = "(Ante*#1#)",
-            v_Bakery_artist = "Artist: #1#",
-            v_Bakery_coder = "Coder: #1#"
+            v_Bakery_artist = "Art: #1#",
+            v_Bakery_coder = "Code: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"
