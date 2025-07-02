@@ -239,9 +239,10 @@ Bakery_API.credit(SMODS.Blind {
         end
     end,
     disable = function(self)
-        if G.Bakery_charm_area and #G.Bakery_charm_area.cards == 1 and not G.Bakery_charm then
+        if G.Bakery_charm_area and #G.Bakery_charm_area.cards == 1 and not G.GAME.Bakery_charm then
             G.GAME.Bakery_charm = G.Bakery_charm_area.cards[1].config.center.key
             G.P_CENTERS[G.GAME.Bakery_charm]:equip(G.Bakery_charm_area.cards[1])
+            SMODS.recalc_debuff(G.Bakery_charm_area.cards[1])
         end
     end,
     defeat = function(self)
