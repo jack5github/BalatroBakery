@@ -219,6 +219,21 @@ Bakery_API.credit(SMODS.Blind {
     coder = 'Jack5',
     idea = 'Jack5',
     -- Charm is debuffed
+    set_blind = function(self)
+        if G.GAME.Bakery_charm then
+            G.P_CENTERS[G.GAME.Bakery_charm]:unequip(G.Bakery_charm_area.cards[1])
+            G.GAME.Bakery_charm = nil
+        end
+    end,
+    disable = function(self)
+        if G.Bakery_charm_area and #G.Bakery_charm_area.cards == 1 and not G.Bakery_charm then
+            G.GAME.Bakery_charm = G.Bakery_charm_area.cards[1].config.center.key
+            G.P_CENTERS[G.GAME.Bakery_charm]:equip(G.Bakery_charm_area.cards[1])
+        end
+    end,
+    defeat = function(self)
+        self:disable()
+    end,
     recalc_debuff = function(self, card, from_blind)
         return not G.GAME.blind.disabled and card.area == G.Bakery_charm_area
     end

@@ -459,17 +459,9 @@ SMODS.Atlas {
     path = "BakeryCharms.png"
 }
 
----Checks if the requirements are met for a Charm to be considered debuffed, in cases where the Charm cannot directly be accessed via a function variable.
----@return boolean True if the Charm area is not present, is empty, or the Charm is debuffed.
-local function is_charm_debuffed_safe()
-    return not G.Bakery_charm_area or #G.Bakery_charm_area.cards == 0
-        or G.Bakery_charm_area.cards[1].debuff
-end
-
 local raw_get_flush = get_flush
 function get_flush(hand)
-    if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Palette'
-        and not is_charm_debuffed_safe() then
+    if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Palette' then
         local suits = SMODS.Suit.obj_buffer
         local suit = {}
         local count = 0
@@ -525,8 +517,7 @@ Bakery_API.no_update_joker_display = false
 
 local raw_evaluate_poker_hand = evaluate_poker_hand
 function evaluate_poker_hand(hand)
-    if G.GAME.Bakery_charm ~= 'BakeryCharm_Bakery_AnaglyphLens'
-        or is_charm_debuffed_safe() or #hand == 0 then
+    if G.GAME.Bakery_charm ~= 'BakeryCharm_Bakery_AnaglyphLens' or #hand == 0 then
         return raw_evaluate_poker_hand(hand)
     end
     local dup = hand[1]
@@ -568,7 +559,6 @@ local raw_five_of_a_kind_modify_display_text = SMODS.PokerHands['Five of a Kind'
 SMODS.PokerHand:take_ownership("Five of a Kind", {
     modify_display_text = function(cards, scoring_hand)
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens'
-            and not is_charm_debuffed_safe()
             and next(get_X_same(5, scoring_hand, true)) then
             return "Bakery_SixOfAKind"
         end
@@ -582,7 +572,6 @@ local raw_flush_five_modify_display_text = SMODS.PokerHands['Flush Five'].modify
 SMODS.PokerHand:take_ownership("Flush Five", {
     modify_display_text = function(cards, scoring_hand)
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens'
-            and not is_charm_debuffed_safe()
             and next(get_X_same(5, scoring_hand, true)) then
             return "Bakery_FlushSix"
         end
@@ -596,7 +585,6 @@ local raw_two_pair_modify_display_text = SMODS.PokerHands['Two Pair'].modify_dis
 SMODS.PokerHand:take_ownership("Two Pair", {
     modify_display_text = function(cards, scoring_hand)
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens'
-            and not is_charm_debuffed_safe()
             and #get_X_same(2, scoring_hand, true) >= 2 and
             #get_X_same(2, scoring_hand, true) >= 2 then
             return "Bakery_ThreePair"
@@ -615,47 +603,45 @@ SMODS.PokerHand:take_ownership("Flush House", {
         return Bakery_API.maximus_full_house_compat(parts, val, true)
     end,
     modify_display_text = function(cards, scoring_hand)
-        if not is_charm_debuffed_safe() then
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #scoring_hand == 5 then
-                local dup = scoring_hand[1]
-                local x = scoring_hand[1].T.x
-                for i = 2, #scoring_hand do
-                    if scoring_hand[i].T.x < x then
-                        x = scoring_hand[i].T.x
-                        dup = scoring_hand[i]
-                    end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #scoring_hand == 5 then
+            local dup = scoring_hand[1]
+            local x = scoring_hand[1].T.x
+            for i = 2, #scoring_hand do
+                if scoring_hand[i].T.x < x then
+                    x = scoring_hand[i].T.x
+                    dup = scoring_hand[i]
                 end
-                if next(get_X_same(4, scoring_hand, true)) then
+            end
+            if next(get_X_same(4, scoring_hand, true)) then
+                return "Bakery_FlushMansion"
+            end
+            local _3 = SMODS.merge_lists(get_X_same(3, scoring_hand, true))
+            for _, v in ipairs(_3) do
+                if v == dup then
                     return "Bakery_FlushMansion"
                 end
-                local _3 = SMODS.merge_lists(get_X_same(3, scoring_hand, true))
-                for _, v in ipairs(_3) do
+            end
+            if next(_3) then
+                local _2 = SMODS.merge_lists(get_X_same(2, scoring_hand, true))
+                for _, v in ipairs(_2) do
                     if v == dup then
-                        return "Bakery_FlushMansion"
-                    end
-                end
-                if next(_3) then
-                    local _2 = SMODS.merge_lists(get_X_same(2, scoring_hand, true))
-                    for _, v in ipairs(_2) do
-                        if v == dup then
-                            return "Bakery_FlushTriplets"
-                        end
+                        return "Bakery_FlushTriplets"
                     end
                 end
             end
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
-                local royal = true
-                for j = 1, #scoring_hand do
-                    local rank = SMODS.Ranks[scoring_hand[j].base.value]
-                    royal = royal and (rank.key == 'Ace' or rank.key == '10' or rank.face)
-                end
-                return royal and "Bakery_RoyalFlushHouse" or "Bakery_StraightFlushHouse"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
+            local royal = true
+            for j = 1, #scoring_hand do
+                local rank = SMODS.Ranks[scoring_hand[j].base.value]
+                royal = royal and (rank.key == 'Ace' or rank.key == '10' or rank.face)
             end
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
-                #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
-                #get_X_same(2, scoring_hand, true) >= 2 then
-                return "Bakery_StuffedFlush"
-            end
+            return royal and "Bakery_RoyalFlushHouse" or "Bakery_StraightFlushHouse"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
+            #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
+            #get_X_same(2, scoring_hand, true) >= 2 then
+            return "Bakery_StuffedFlush"
         end
         if raw_flush_house_modify_display_text then
             return raw_flush_house_modify_display_text()
@@ -667,7 +653,7 @@ local raw_flush_modify_display_text = SMODS.PokerHands['Flush'].modify_display_t
 SMODS.PokerHand:take_ownership("Flush", {
     modify_display_text = function(cards, scoring_hand)
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens'
-            and not is_charm_debuffed_safe() and #scoring_hand == 5 and
+            and #scoring_hand == 5 and
             #get_X_same(2, scoring_hand, true) >= 2 and next(all_suits(5, scoring_hand)) then
             return "Bakery_FlushThreePair"
         end
@@ -711,7 +697,6 @@ end)
 -- END_KEEP_LITE
 function Bakery_API.maximus_full_house_compat(parts, val, flush)
     if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree'
-        and not is_charm_debuffed_safe()
         and #parts.Bakery_s_3 >= 1 and #parts.Bakery_s_2 >= 2
         and #parts.Bakery_s_all_pairs[1] >= 5 and (not flush or next(parts._flush)) then
         val = { SMODS.merge_lists(val, parts.Bakery_s_all_pairs) }
@@ -727,19 +712,17 @@ SMODS.PokerHand:take_ownership("Full House", {
         return Bakery_API.maximus_full_house_compat(parts, val)
     end,
     modify_display_text = function(cards, scoring_hand)
-        if not is_charm_debuffed_safe() then
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
-                #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
-                #get_X_same(2, scoring_hand, true) >= 2 then
-                return "Bakery_StuffedHouse"
-            end
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
-                return "Bakery_StraightHouse"
-            end
-            if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #get_X_same(3, scoring_hand, true) >= 1 and
-                #get_X_same(2, scoring_hand, true) >= 2 then
-                return "Bakery_TwoTriplets"
-            end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and #all_suits(3, scoring_hand) >= 1 and
+            #all_suits(2, scoring_hand) >= 2 and #get_X_same(3, scoring_hand, true) >= 1 and
+            #get_X_same(2, scoring_hand, true) >= 2 then
+            return "Bakery_StuffedHouse"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree' and next(get_straight(scoring_hand)) then
+            return "Bakery_StraightHouse"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens' and #get_X_same(3, scoring_hand, true) >= 1 and
+            #get_X_same(2, scoring_hand, true) >= 2 then
+            return "Bakery_TwoTriplets"
         end
         if raw_Full_House_modify_display_text then
             return raw_Full_House_modify_display_text()
@@ -759,8 +742,7 @@ Bakery_API.Charm {
 local raw_G_FUNCS_can_discard = G.FUNCS.can_discard
 function G.FUNCS.can_discard(e)
     if G.GAME.current_round.discards_left > 0 and #G.hand.highlighted <= 0 and
-        (G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Rune' or G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Obsession')
-        and not is_charm_debuffed_safe() then
+        (G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Rune' or G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Obsession') then
         e.config.colour = G.C.RED
         e.config.button = 'Bakery_discard_zero'
     else
@@ -771,7 +753,7 @@ end
 sendInfoMessage("G.FUNCS.can_discard() patched. Reason: Discarding zero cards", "Bakery")
 
 G.FUNCS.Bakery_discard_zero = function(e)
-    if #G.Bakery_charm_area.cards == 0 or is_charm_debuffed_safe() then
+    if #G.Bakery_charm_area.cards == 0 or not G.GAME.Bakery_charm then
         return
     end
 
@@ -899,7 +881,7 @@ local raw_Game_update_draw_to_hand = Game.update_draw_to_hand
 function Game:update_draw_to_hand(dt)
     local function condition()
         juicing = (G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Obsession' or G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Rune')
-            and not is_charm_debuffed_safe() and G.GAME.current_round and
+            and G.GAME.current_round and
             G.GAME.current_round.discards_left > 0 and
             G.STATE ~= G.STATES.ROUND_EVAL
         return juicing
@@ -1001,8 +983,7 @@ local raw_e_negative_get_weight = G.P_CENTERS.e_negative.get_weight
 SMODS.Edition:take_ownership('negative', {
     get_weight = function(self)
         local w = raw_e_negative_get_weight(self)
-        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Void'
-            and not is_charm_debuffed_safe() then
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Void' then
             w = w * G.Bakery_charm_area.cards[1].ability.extra.mod
         end
         return w
@@ -1121,8 +1102,7 @@ if next(SMODS.find_mod "MoreFluff") then
     function CardArea:emplace(card, ...)
         local ret = { raw_CardArea_emplace(self, card, ...) }
         if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization'
-            and not is_charm_debuffed_safe() and card
-            and card.config.center and card.config.center.set == 'Colour' then
+            and card and card.config.center and card.config.center.set == 'Colour' then
             self.config.card_limit = self.config.card_limit + 0.5
         end
         return unpack(ret)
@@ -1132,8 +1112,7 @@ if next(SMODS.find_mod "MoreFluff") then
     function CardArea:remove_card(card, ...)
         local ret = { raw_CardArea_remove_card(self, card, ...) }
         if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization'
-            and not is_charm_debuffed_safe() and card
-            and card.config.center and card.config.center.set == 'Colour' then
+            and card and card.config.center and card.config.center.set == 'Colour' then
             self.config.card_limit = self.config.card_limit - 0.5
         end
         return unpack(ret)
@@ -1142,8 +1121,7 @@ if next(SMODS.find_mod "MoreFluff") then
     local raw_CardArea_update = CardArea.update
     function CardArea:update(...)
         local ret = { raw_CardArea_update(self, card, ...) }
-        if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization'
-            and not is_charm_debuffed_safe() then
+        if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization' then
             local x = 0
             for _, v in pairs(self.cards) do
                 if v.config.center.set == 'Colour' then
@@ -1158,8 +1136,7 @@ if next(SMODS.find_mod "MoreFluff") then
     local raw_CardArea_draw = CardArea.draw
     function CardArea:draw()
         if self.children.area_uibox and G.GAME
-            and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization'
-            and not is_charm_debuffed_safe() then
+            and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Posterization' then
             local el = self.children.area_uibox:get_UIE_by_ID 'Bakery_card_limit_text'
             if el then el.config.ref_value = 'Bakery_visual_card_limit' end
             local x = 0
@@ -1203,8 +1180,7 @@ if next(SMODS.find_mod 'Cryptid') then
     local raw_evaluate_poker_hand = evaluate_poker_hand
     function evaluate_poker_hand(cards, ...)
         local ret = raw_evaluate_poker_hand(cards, ...)
-        if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Marm'
-            and not is_charm_debuffed_safe() then
+        if G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Marm' then
             local any = false
             for k, v in pairs(ret) do
                 if #ret[k] > 0 then any = true end
@@ -1229,15 +1205,13 @@ if next(SMODS.find_mod 'Cryptid') then
     local raw_get_weight = SMODS.Rarities.Common.get_weight
     SMODS.Rarity:take_ownership("Common", {
         get_weight = function(...)
-            return G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_DuctTape'
-                and not is_charm_debuffed_safe() and 0 or raw_get_weight(...)
+            return G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_DuctTape' and 0 or raw_get_weight(...)
         end
     })
     local raw_get_weight = SMODS.Rarities.Common.get_weight
     SMODS.Rarity:take_ownership("Uncommon", {
         get_weight = function(...)
-            return G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_DuctTape'
-                and not is_charm_debuffed_safe() and 0 or raw_get_weight(...)
+            return G.GAME and G.GAME.Bakery_charm == 'BakeryCharm_Bakery_DuctTape' and 0 or raw_get_weight(...)
         end
     })
 end
