@@ -201,6 +201,7 @@ Bakery_API.credit(SMODS.Blind {
             (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))
     end,
     in_pool = function()
+        if not G.playing_cards then return false end
         local count = 0
         for i = 1, #G.playing_cards do
             if SMODS.has_no_rank(G.playing_cards[i]) or SMODS.has_no_suit(G.playing_cards[i]) then
