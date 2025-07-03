@@ -1,6 +1,6 @@
 # Bakery
 
-A mod for [Balatro](https://www.playbalatro.com/) that adds various miscellaneous things, created by BakersDozenBagels.
+A mod for [Balatro](https://playbalatro.com) that adds various miscellaneous things, created by BakersDozenBagels.
 
 Additions are generally meant to be well-balanced with vanilla, although the decks are a bit wackier.
 
@@ -40,5 +40,7 @@ If another mod depends on Bakery, but you do not want Bakery's additions, you ca
 
 ## Other Contributors
 
-- GhostSalt (@ghost12salt) and SadCube (@sadcube) on Discord - Some of the artwork used
-- [Jack5 (@jack5)](https://github.com/jack5github/) - Some coding and artwork
+- GhostSalt (@ghost12salt) and SadCube (@sadcube) - Some of the artwork used
+- [Jack5](https://github.com/jack5github) (@jack5) - Some ideas, coding and artwork
+
+> @ handles are for Discord.

@@ -193,13 +193,14 @@ Bakery_API.credit(SMODS.Blind {
     artist = 'Jack5',
     coder = 'Jack5',
     idea = 'Jack5',
-    -- Cards with no rank or no suit are debuffed
+    -- Cards with no rank or suit are debuffed
     recalc_debuff = function(self, card, from_blind)
         return
             not G.GAME.blind.disabled and
             card.area ~= G.jokers and
             (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))
     end,
+    -- Only appears if 1 in 6 cards have no rank or suit
     in_pool = function()
         if not G.playing_cards then return false end
         local count = 0

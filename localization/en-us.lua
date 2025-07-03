@@ -288,8 +288,8 @@ return {
             bl_Bakery_Samekh = {
                 name = "The Ruler",
                 text = {
-                    "Cards with no rank or",
-                    "suit are debuffed"
+                    "Cards with no rank",
+                    "or suit are debuffed"
                 }
             },
             bl_Bakery_Lammed = {
