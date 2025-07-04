@@ -918,3 +918,79 @@ if next(SMODS.find_mod 'Cryptid') then
     }
     --#endregion
 end
+
+if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
+    --#region Virus
+    Balatest.TestPlay {
+        name = 'virus',
+        category = { 'charms', 'virus', 'garbshit' },
+
+        deck = { cards = {
+            { r = '5', s = 'D' },
+            { r = 'A', s = 'S' }
+        } },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Virus'
+            Balatest.play_hand { '5D' }
+            Balatest.wait_for_input()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.hand.cards, 1)
+            Balatest.assert_eq(G.hand.cards[1].ability.name, 'm_garb_infected')
+        end
+    }
+    Balatest.TestPlay {
+        name = 'virus_enhanced',
+        category = { 'charms', 'virus', 'garbshit' },
+
+        deck = { cards = {
+            { r = '5', s = 'D', e = 'm_wild' },
+            { r = 'A', s = 'S', e = 'm_wild' }
+        } },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Virus'
+            Balatest.play_hand { '5D' }
+            Balatest.wait_for_input()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.hand.cards, 1)
+            Balatest.assert_eq(G.hand.cards[1].ability.name, 'm_garb_infected')
+        end
+    }
+    Balatest.TestPlay {
+        name = 'virus_infected',
+        category = { 'charms', 'virus', 'garbshit' },
+
+        deck = { cards = {
+            { r = '5', s = 'D', e = 'm_garb_infected' },
+            { r = 'A', s = 'S', e = 'm_garb_infected' }
+        } },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Virus'
+            Balatest.play_hand { '5D' }
+            Balatest.wait_for_input()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.hand.cards, 1)
+            Balatest.assert_eq(G.hand.cards[1].ability.name, 'm_garb_infected')
+        end
+    }
+    Balatest.TestPlay {
+        name = 'virus_no_cards',
+        category = { 'charms', 'virus', 'garbshit' },
+
+        jokers = { 'j_joker', 'j_joker', 'j_cavendish' },
+        deck = { cards = {
+            { r = 'A', s = 'D' },
+        } },
+        execute = function()
+            equip 'BakeryCharm_Bakery_Virus'
+            Balatest.play_hand { 'AD' }
+            Balatest.wait_for_input()
+        end,
+        assert = function()
+            Balatest.assert_eq(#G.hand.cards, 0)
+        end
+    }
+    --#endregion
+end
