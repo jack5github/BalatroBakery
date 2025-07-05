@@ -239,158 +239,164 @@ Bakery_API.credit(SMODS.Blind {
     end
 })
 
-sendInfoMessage(
-    "Priority increased to 0.1. Reason: Wait for More Fluff DX Boss Blinds", "Bakery"
-)
+-- DX Boss Blinds
+if next(SMODS.find_mod "MoreFluff") then
+    G.E_MANAGER:add_event(Event({ -- Event required so that More Fluff can load first
+        trigger = 'after',
+        delay = 0.01,
+        func = function()
+            if not SMODS.Mods["MoreFluff"].config or
+                not SMODS.Mods["MoreFluff"].config["Superboss"] then
+                return true
+            end
 
-if next(SMODS.find_mod "MoreFluff") and SMODS.Mods["MoreFluff"].config
-    and SMODS.Mods["MoreFluff"].config["Superboss"] then
-    -- DX Boss Blinds
-    SMODS.Atlas {
-        key = "BakeryBlindsDX",
-        path = "BakeryBlindsDX.png",
-        px = 34,
-        py = 34,
-        atlas_table = 'ANIMATION_ATLAS',
-        frames = 21
-    }
-
-    SMODS.Blind {
-        key = "AlephDX", -- The Leader DX
-        atlas = "BakeryBlindsDX",
-        debuff = {
-            superboss = true,
-
-            akyrs_blind_difficulty = "dx",
-            akyrs_cannot_be_disabled = true,
-        },
-        boss = {
-            min = 9, max = 10, showdown = true
-        },
-        in_pool = function(self)
-            return G.GAME.round_resets.ante > G.GAME.win_ante
-        end,
-        boss_colour = HEX('ac3232'),
-        --[[
-        artist = Jack5,
-        coder = Jack5,
-        ]]
-        -- -2 Hand, -2 Discard
-        set_blind = function(self)
-            ease_discard(-2)
-            ease_hands_played(-2)
-        end,
-        disable = function(self)
-            ease_discard(2)
-            ease_hands_played(2)
-        end
-    }
-
-    SMODS.Blind {
-        key = "TsadiDX", -- The Attrition DX
-        atlas = "BakeryBlindsDX",
-        pos = {
-            y = 1
-        },
-        debuff = {
-            superboss = true,
-
-            akyrs_blind_difficulty = "dx",
-            akyrs_cannot_be_disabled = true,
-        },
-        boss = {
-            min = 9, max = 10, showdown = true
-        },
-        in_pool = function(self)
-            return G.GAME.round_resets.ante > G.GAME.win_ante
-        end,
-        boss_colour = HEX('ac3232'),
-        --[[
-        artist = Jack5,
-        coder = Jack5,
-        ]]
-        -- -(Ante*10) Mult before scoring
-        config = {
-            extra = {
-                scale = 10
+            SMODS.Atlas {
+                key = "BakeryBlindsDX",
+                path = "BakeryBlindsDX.png",
+                px = 34,
+                py = 34,
+                atlas_table = 'ANIMATION_ATLAS',
+                frames = 21
             }
-        },
-        collection_loc_vars = function(self)
-            return {
-                vars = { localize {
-                    type = 'variable',
-                    key = 'b_Bakery_ante_times',
-                    vars = { self.config.extra.scale }
-                } }
+
+            SMODS.Blind {
+                key = "AlephDX", -- The Leader DX
+                atlas = "BakeryBlindsDX",
+                debuff = {
+                    superboss = true,
+
+                    akyrs_blind_difficulty = "dx",
+                    akyrs_cannot_be_disabled = true,
+                },
+                boss = {
+                    min = 9, max = 10, showdown = true
+                },
+                in_pool = function(self)
+                    return G.GAME.round_resets.ante > G.GAME.win_ante
+                end,
+                boss_colour = HEX('ac3232'),
+                artist = 'Jack5',
+                coder = 'Jack5',
+                idea = 'Jack5',
+                -- -2 Hand, -2 Discard
+                set_blind = function(self)
+                    ease_discard(-2)
+                    ease_hands_played(-2)
+                end,
+                disable = function(self)
+                    ease_discard(2)
+                    ease_hands_played(2)
+                end
             }
-        end,
-        loc_vars = function(self)
-            return {
-                vars = { G.GAME.round_resets.ante * self.config.extra.scale }
+
+            SMODS.Blind {
+                key = "TsadiDX", -- The Attrition DX
+                atlas = "BakeryBlindsDX",
+                pos = {
+                    y = 1
+                },
+                debuff = {
+                    superboss = true,
+
+                    akyrs_blind_difficulty = "dx",
+                    akyrs_cannot_be_disabled = true,
+                },
+                boss = {
+                    min = 9, max = 10, showdown = true
+                },
+                in_pool = function(self)
+                    return G.GAME.round_resets.ante > G.GAME.win_ante
+                end,
+                boss_colour = HEX('ac3232'),
+                artist = 'Jack5',
+                coder = 'Jack5',
+                idea = 'Jack5',
+                -- -(Ante*10) Mult before scoring
+                config = {
+                    extra = {
+                        scale = 10
+                    }
+                },
+                collection_loc_vars = function(self)
+                    return {
+                        vars = { localize {
+                            type = 'variable',
+                            key = 'b_Bakery_ante_times',
+                            vars = { self.config.extra.scale }
+                        } }
+                    }
+                end,
+                loc_vars = function(self)
+                    return {
+                        vars = { G.GAME.round_resets.ante * self.config.extra.scale }
+                    }
+                end,
+                modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)
+                    return mult - (
+                        G.GAME.round_resets.ante * self.config.extra.scale
+                    ), hand_chips, true
+                end
             }
-        end,
-        modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)
-            return mult - (G.GAME.round_resets.ante * self.config.extra.scale), hand_chips, true
+
+            SMODS.Blind {
+                key = "KafDX", -- The Build DX
+                atlas = "BakeryBlindsDX",
+                pos = {
+                    y = 4
+                },
+                debuff = {
+                    superboss = true,
+
+                    akyrs_blind_difficulty = "dx",
+                    akyrs_cannot_be_disabled = true,
+                },
+                boss = {
+                    min = 9, max = 10, showdown = true
+                },
+                in_pool = function(self)
+                    return G.GAME.round_resets.ante > G.GAME.win_ante
+                end,
+                boss_colour = HEX('ac3232'),
+                artist = 'Jack5',
+                coder = 'Jack5',
+                idea = 'Jack5',
+                -- No base Chips or Mult
+                modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)
+                    return 0, 0, hand_chips ~= 0 and mult ~= 0
+                end
+            }
+
+            SMODS.Blind {
+                key = "SamekhDX", -- The Ruler DX
+                atlas = "BakeryBlindsDX",
+                pos = {
+                    y = 5
+                },
+                debuff = {
+                    superboss = true,
+
+                    akyrs_blind_difficulty = "dx",
+                    akyrs_cannot_be_disabled = true,
+                },
+                boss = {
+                    min = 9, max = 10, showdown = true
+                },
+                in_pool = function(self)
+                    return G.GAME.round_resets.ante > G.GAME.win_ante
+                end,
+                boss_colour = HEX('ac3232'),
+                artist = 'Jack5',
+                coder = 'Jack5',
+                idea = 'Jack5',
+                -- Cards with no rank or no suit plus face cards and Aces are debuffed
+                recalc_debuff = function(self, card, from_blind)
+                    return not G.GAME.blind.disabled and card.area ~= G.jokers and (
+                        SMODS.has_no_rank(card) or SMODS.has_no_suit(card) or
+                        card.base.id > 10
+                    )
+                end
+            }
+            return true
         end
-    }
-
-    SMODS.Blind {
-        key = "KafDX", -- The Build DX
-        atlas = "BakeryBlindsDX",
-        pos = {
-            y = 4
-        },
-        debuff = {
-            superboss = true,
-
-            akyrs_blind_difficulty = "dx",
-            akyrs_cannot_be_disabled = true,
-        },
-        boss = {
-            min = 9, max = 10, showdown = true
-        },
-        in_pool = function(self)
-            return G.GAME.round_resets.ante > G.GAME.win_ante
-        end,
-        boss_colour = HEX('ac3232'),
-        --[[
-        artist = Jack5,
-        coder = Jack5,
-        ]]
-        -- No base Chips or Mult
-        modify_hand = function(self, cards, poker_hands, text, mult, hand_chips)
-            return 0, 0, hand_chips ~= 0 and mult ~= 0
-        end
-    }
-
-    SMODS.Blind {
-        key = "SamekhDX", -- The Ruler DX
-        atlas = "BakeryBlindsDX",
-        pos = {
-            y = 5
-        },
-        debuff = {
-            superboss = true,
-
-            akyrs_blind_difficulty = "dx",
-            akyrs_cannot_be_disabled = true,
-        },
-        boss = {
-            min = 9, max = 10, showdown = true
-        },
-        in_pool = function(self)
-            return G.GAME.round_resets.ante > G.GAME.win_ante
-        end,
-        boss_colour = HEX('ac3232'),
-        --[[
-        artist = Jack5,
-        coder = Jack5,
-        ]]
-        -- Cards with no rank or no suit plus face cards and Aces are debuffed
-        recalc_debuff = function(self, card, from_blind)
-            return not G.GAME.blind.disabled and card.area ~= G.jokers and (
-                SMODS.has_no_rank(card) or SMODS.has_no_suit(card) or card.base.id > 10
-            )
-        end
-    }
+    }))
 end
