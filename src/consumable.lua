@@ -209,6 +209,8 @@ Bakery_API.credit(SMODS.Consumable {
                             _card:set_eternal(nil)
                             _card:add_to_deck()
                             G.jokers:emplace(_card)
+
+                            check_for_unlock { type = 'Bakery_Scribe_Joker', key = copied.config.center.key }
                         end
                     end
                 end

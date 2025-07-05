@@ -419,6 +419,14 @@ return {
                 unlock = {
                     "Have {C:attention}only {C:green}Infected Cards",
                 }
+            },
+            BakeryCharm_Bakery_PetriDish = {
+                name = "Petri Dish",
+                text = { "{C:attention}+#1#{} consumable slots" },
+                unlock = {
+                    "Copy {C:legendary}#1#",
+                    "with {C:tarot}#2#"
+                }
             }
             -- KEEP_LITE
         },

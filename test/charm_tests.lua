@@ -994,3 +994,58 @@ if next(SMODS.find_mod 'GARBPACK') then -- Garbshit
     }
     --#endregion
 end
+
+--#region Petri Dish
+Balatest.TestPlay {
+    name = 'petri_dish_equip',
+    category = { 'charms', 'petri_dish' },
+
+    execute = function()
+        equip 'BakeryCharm_Bakery_PetriDish'
+    end,
+    assert = function()
+        Balatest.assert_eq(G.consumeables.config.card_limit, 4)
+    end
+}
+Balatest.TestPlay {
+    name = 'petri_dish_unequip',
+    category = { 'charms', 'petri_dish' },
+
+    execute = function()
+        equip 'BakeryCharm_Bakery_PetriDish'
+        equip 'BakeryCharm_Bakery_Coin'
+    end,
+    assert = function()
+        Balatest.assert_eq(G.consumeables.config.card_limit, 2)
+    end
+}
+Balatest.TestPlay {
+    name = 'petri_dish_debuff',
+    category = { 'charms', 'petri_dish', 'stoic' },
+
+    blind = 'bl_Bakery_Lammed',
+    no_auto_start = true,
+    execute = function()
+        equip 'BakeryCharm_Bakery_PetriDish'
+        Balatest.start_round()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.consumeables.config.card_limit, 2)
+    end
+}
+Balatest.TestPlay {
+    name = 'petri_dish_undebuff',
+    category = { 'charms', 'petri_dish', 'stoic' },
+
+    blind = 'bl_Bakery_Lammed',
+    no_auto_start = true,
+    execute = function()
+        equip 'BakeryCharm_Bakery_PetriDish'
+        Balatest.start_round()
+        Balatest.end_round()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.consumeables.config.card_limit, 4)
+    end
+}
+--#endregion

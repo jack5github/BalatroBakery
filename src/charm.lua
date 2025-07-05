@@ -1023,6 +1023,44 @@ Bakery_API.Charm {
     end
 }
 
+Bakery_API.Charm {
+    key = "PetriDish",
+    pos = { x = 0, y = 3 },
+    atlas = 'Charms',
+    unlocked = false,
+    config = {
+        extra = 2
+    },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra } }
+    end,
+    locked_loc_vars = function()
+        return {
+            vars = {
+                G.P_CENTERS.j_perkeo.discovered and localize {
+                    type = 'name_text',
+                    key = 'j_perkeo',
+                    set = "Joker"
+                } or localize('k_unknown'),
+                G.P_CENTERS.c_Bakery_Scribe.discovered and localize {
+                    type = 'name_text',
+                    key = 'c_Bakery_Scribe',
+                    set = "Tarot"
+                } or localize('k_unknown')
+            }
+        }
+    end,
+    check_for_unlock = function(self, args)
+        return args.type == 'Bakery_Scribe_Joker' and args.key == 'j_perkeo'
+    end,
+    equip = function(self, card)
+        G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra
+    end,
+    unequip = function(self, card)
+        G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra
+    end
+}
+
 if next(SMODS.find_mod "RevosVault") then
     Bakery_API.Charm {
         key = "PrintError",

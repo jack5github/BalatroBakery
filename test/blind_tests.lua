@@ -200,7 +200,7 @@ end
 
 Balatest.TestPlay {
     name = 'stoic_coin',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'coin' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -215,7 +215,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_coin_undebuffed',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'coin' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -231,7 +231,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_coin_disabled',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'coin' },
 
     jokers = { 'j_chicot' },
     blind = 'bl_Bakery_Lammed',
@@ -248,7 +248,7 @@ Balatest.TestPlay {
 local count_equip, count_unequip
 Balatest.TestPlay {
     name = 'stoic_coin_disabled_twice',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'coin' },
 
     jokers = { 'j_chicot', 'j_chicot' },
     blind = 'bl_Bakery_Lammed',
@@ -276,7 +276,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_coin_disabled_beaten',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'coin' },
 
     jokers = { 'j_chicot' },
     blind = 'bl_Bakery_Lammed',
@@ -305,7 +305,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_obsession',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'obsession' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -321,7 +321,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_obsession_attempted',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'obsession' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -337,7 +337,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_pedigree',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'pedigree' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -352,7 +352,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_epitaph',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'epitaph' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
@@ -367,7 +367,7 @@ Balatest.TestPlay {
 }
 Balatest.TestPlay {
     name = 'stoic_anaglyph_lens',
-    category = { 'blinds', 'stoic' },
+    category = { 'blinds', 'stoic', 'anaglyph_lens' },
 
     blind = 'bl_Bakery_Lammed',
     no_auto_start = true,
