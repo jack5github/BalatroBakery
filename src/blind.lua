@@ -179,7 +179,7 @@ SMODS.Blind {
     end
 }
 
-SMODS.Blind {
+Bakery_API.credit(SMODS.Blind {
     key = "Samekh", -- The Ruler
     atlas = "BakeryBlinds",
     pos = {
@@ -190,21 +190,20 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('eaba23'),
-    --[[
-    artist = Jack5,
-    coder = Jack5,
-    ]]
-    -- Cards with no rank or no suit are debuffed
+    artist = 'Jack5',
+    coder = 'Jack5',
+    idea = 'Jack5',
+    -- Cards with no rank or suit are debuffed
     recalc_debuff = function(self, card, from_blind)
         return not G.GAME.blind.disabled and card.area ~= G.jokers and (
             SMODS.has_no_rank(card) or SMODS.has_no_suit(card)
         )
     end
-}
+})
 
 sendInfoMessage("Blind:set_blind() patched. Reason: Allow Charms to be debuffed")
 
-SMODS.Blind {
+Bakery_API.credit(SMODS.Blind {
     key = "Lammed", -- The Stoic
     atlas = "BakeryBlinds",
     pos = {
@@ -215,15 +214,30 @@ SMODS.Blind {
         max = 0
     },
     boss_colour = HEX('5a6159'),
-    --[[
-    artist = Jack5,
-    coder = Jack5,
-    ]]
+    artist = 'Jack5',
+    coder = 'Jack5',
+    idea = 'Jack5',
     -- Charm is debuffed
+    set_blind = function(self)
+        if G.GAME.Bakery_charm then
+            G.P_CENTERS[G.GAME.Bakery_charm]:unequip(G.Bakery_charm_area.cards[1])
+            G.GAME.Bakery_charm = nil
+        end
+    end,
+    disable = function(self)
+        if G.Bakery_charm_area and #G.Bakery_charm_area.cards == 1 and not G.GAME.Bakery_charm then
+            G.GAME.Bakery_charm = G.Bakery_charm_area.cards[1].config.center.key
+            G.P_CENTERS[G.GAME.Bakery_charm]:equip(G.Bakery_charm_area.cards[1])
+            SMODS.recalc_debuff(G.Bakery_charm_area.cards[1])
+        end
+    end,
+    defeat = function(self)
+        self:disable()
+    end,
     recalc_debuff = function(self, card, from_blind)
         return not G.GAME.blind.disabled and card.area == G.Bakery_charm_area
     end
-}
+})
 
 sendInfoMessage(
     "Priority increased to 0.1. Reason: Wait for More Fluff DX Boss Blinds", "Bakery"

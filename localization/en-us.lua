@@ -303,8 +303,8 @@ return {
             bl_Bakery_Samekh = {
                 name = "The Ruler",
                 text = {
-                    "Cards with no rank or",
-                    "no suit are debuffed"
+                    "Cards with no rank",
+                    "or suit are debuffed"
                 }
             },
             bl_Bakery_SamekhDX = {
@@ -431,6 +431,16 @@ return {
                     "{C:attention}Jokers{} don't appear",
                     "{C:red}Cannot be removed"
                 }
+            },
+            BakeryCharm_Bakery_Virus = {
+                name = "Virus",
+                text = {
+                    "{C:green}Infects{} a random uninfected",
+                    "card held in hand after scoring"
+                },
+                unlock = {
+                    "Have {C:attention}only {C:green}Infected Cards",
+                }
             }
             -- KEEP_LITE
         },
@@ -479,7 +489,9 @@ return {
             b_Bakery_deposit = "DEPOSIT $#1#",
             b_Bakery_ante_times = "(Ante*#1#)",
             v_Bakery_artist = "Art: #1#",
-            v_Bakery_coder = "Code: #1#"
+            v_Bakery_coder = "Code: #1#",
+            v_Bakery_idea = "Idea: #1#",
+            v_Bakery_by = "Made by: #1#"
         },
         labels = {
             Bakery_Carbon = "Carbon"
