@@ -128,7 +128,7 @@ Balatest.TestPlay {
 
         for k, v in pairs(G.hand.cards) do
             assert(v.config.center.key == 'c_base',
-            "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
+                "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
         end
     end
 }
@@ -149,7 +149,7 @@ Balatest.TestPlay {
 
         for k, v in pairs(G.hand.cards) do
             assert(v.config.center.key == 'c_base',
-            "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
+                "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
         end
     end
 }
@@ -405,4 +405,14 @@ Balatest.TestPlay {
     assert = function()
         Balatest.assert_chips(12)
     end
+}
+Balatest.TestPlay {
+    name = 'stoic_no_charm',
+    category = { 'blinds', 'stoic' },
+
+    blind = 'bl_Bakery_Lammed',
+    execute = function()
+        Balatest.end_round()
+    end,
+    assert = function() end -- Just check for no crash
 }

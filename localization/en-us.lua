@@ -427,6 +427,11 @@ return {
                     "Copy {C:legendary}#1#",
                     "with {C:tarot}#2#"
                 }
+            },
+            BakeryCharm_Bakery_Cogwheel = {
+                name = 'Cogwheel',
+                text = { "{C:attention}-#1#{} Antes,", "{C:attention}-#2#{} card in shop" },
+                unlock = { 'Clear Ante {C:attention}#1#' }
             }
             -- KEEP_LITE
         },

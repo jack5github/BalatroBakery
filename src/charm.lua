@@ -1061,6 +1061,35 @@ Bakery_API.Charm {
     end
 }
 
+Bakery_API.Charm {
+    key = 'Cogwheel',
+    pos = { x = 1, y = 3 },
+    atlas = 'Charms',
+    unlocked = false,
+    config = { extra = { antes = 2, cards = 1 } },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.antes, card.ability.extra.cards } }
+    end,
+    locked_loc_vars = function()
+        return { vars = { 16 } }
+    end,
+    check_for_unlock = function(self, args)
+        return G.GAME.round_resets.ante > 16
+    end,
+    equip = function(self, card)
+        ease_ante(-card.ability.extra.antes)
+        G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante or G.GAME.round_resets.ante
+        G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante - card.ability.extra.antes
+        change_shop_size(-card.ability.extra.cards)
+    end,
+    unequip = function(self, card)
+        ease_ante(card.ability.extra.antes)
+        G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante or G.GAME.round_resets.ante
+        G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante + card.ability.extra.antes
+        change_shop_size(card.ability.extra.cards)
+    end
+}
+
 if next(SMODS.find_mod "RevosVault") then
     Bakery_API.Charm {
         key = "PrintError",

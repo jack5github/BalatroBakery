@@ -1049,3 +1049,74 @@ Balatest.TestPlay {
     end
 }
 --#endregion
+
+--#region Cogwheel
+Balatest.TestPlay {
+    name = 'cogwheel',
+    category = { 'charms', 'cogwheel' },
+
+    execute = function()
+        Balatest.end_round()
+        Balatest.cash_out()
+        equip 'BakeryCharm_Bakery_Cogwheel'
+        Balatest.wait_for_input()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.GAME.round_resets.ante, -1)
+        Balatest.assert_eq(G.shop_jokers.config.card_limit, 1)
+    end
+}
+Balatest.TestPlay {
+    name = 'cogwheel_unequip',
+    category = { 'charms', 'cogwheel' },
+
+    execute = function()
+        Balatest.end_round()
+        Balatest.cash_out()
+        equip 'BakeryCharm_Bakery_Cogwheel'
+        equip 'BakeryCharm_Bakery_Coin'
+        Balatest.wait_for_input()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.GAME.round_resets.ante, 1)
+        Balatest.assert_eq(G.GAME.shop.joker_max, 2)
+    end
+}
+Balatest.TestPlay {
+    name = 'cogwheel_debuff',
+    category = { 'charms', 'cogwheel', 'blinds', 'stoic' },
+
+    blind = 'bl_Bakery_Lammed',
+    execute = function()
+        Balatest.end_round()
+        Balatest.cash_out()
+        equip 'BakeryCharm_Bakery_Cogwheel'
+        Balatest.exit_shop()
+        Balatest.start_round()
+        Balatest.wait_for_input()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.GAME.round_resets.ante, 2)
+        Balatest.assert_eq(G.GAME.shop.joker_max, 2)
+    end
+}
+Balatest.TestPlay {
+    name = 'cogwheel_undebuff',
+    category = { 'charms', 'cogwheel', 'blinds', 'stoic' },
+
+    blind = 'bl_Bakery_Lammed',
+    execute = function()
+        Balatest.end_round()
+        Balatest.cash_out()
+        equip 'BakeryCharm_Bakery_Cogwheel'
+        Balatest.exit_shop()
+        Balatest.start_round()
+        Balatest.end_round()
+        Balatest.wait_for_input()
+    end,
+    assert = function()
+        Balatest.assert_eq(G.GAME.round_resets.ante, 1)
+        Balatest.assert_eq(G.GAME.shop.joker_max, 1)
+    end
+}
+--#endregion
