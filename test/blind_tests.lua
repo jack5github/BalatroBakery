@@ -125,6 +125,32 @@ Balatest.TestPlay {
     execute = function() end,
     assert = function()
         Balatest.assert_eq(#G.hand.cards, 52)
+
+        for k, v in pairs(G.hand.cards) do
+            assert(v.config.center.key == 'c_base',
+            "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
+        end
+    end
+}
+Balatest.TestPlay {
+    name = 'down_tag_witch',
+    category = { 'tags', 'blinds', 'down_tag', 'witch' },
+
+    hand_size = 100,
+    no_auto_start = true,
+    blind = 'bl_Bakery_Qof',
+    execute = function()
+        Balatest.skip_blind 'tag_Bakery_DownTag'
+        Balatest.start_round()
+    end,
+    assert = function()
+        Balatest.assert_eq(#G.GAME.tags, 0)
+        Balatest.assert_eq(#G.hand.cards, 52)
+
+        for k, v in pairs(G.hand.cards) do
+            assert(v.config.center.key == 'c_base',
+            "Card " .. k .. " should have no enhancement, found " .. v.config.center.key)
+        end
     end
 }
 

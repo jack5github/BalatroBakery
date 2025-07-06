@@ -147,9 +147,10 @@ SMODS.Blind {
         local done = 0
         for i = 1, #G.deck.cards do
             if G.deck.cards[i].config.center.key == 'm_Bakery_Curse' then
+                local card = G.deck.cards[i]
                 G.E_MANAGER:add_event(Event {
                     func = function()
-                        G.deck.cards[i]:start_dissolve()
+                        card:start_dissolve()
                         return true
                     end
                 })
