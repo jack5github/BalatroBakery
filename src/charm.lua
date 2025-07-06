@@ -757,7 +757,7 @@ end
 sendInfoMessage("G.FUNCS.can_discard() patched. Reason: Discarding zero cards", "Bakery")
 
 G.FUNCS.Bakery_discard_zero = function(e)
-    if can_discard_zero() then return end
+    if not can_discard_zero() then return end
 
     stop_use()
     G.CONTROLLER.interrupt.focus = true
