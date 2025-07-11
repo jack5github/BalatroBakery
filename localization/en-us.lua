@@ -308,6 +308,14 @@ return {
                     "Enhances {C:attention}#1#{} selected",
                     "card into a {C:attention}#2#"
                 }
+            },
+            c_Bakery_Boids = {
+                name = "Boids",
+                text = {
+                    "Converts up to {C:attention}#1#{} selected",
+                    "cards into the {C:attention}same",
+                    "random {C:attention}suit {}and {C:attention}rank"
+                }
             }
         },
         Tarot = {

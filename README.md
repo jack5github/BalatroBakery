@@ -14,7 +14,7 @@ Current contents:
 - 7 Blinds
 - 3 Challenges
 - 1 Tarot Card
-- 2 Spectral Cards
+- 3 Spectral Cards
 - 2 Enhancements
 - 1 Edition
 - Miscellaneous modding API features (If this mod does something interesting, it can probably be used as a dependency to do that thing)
