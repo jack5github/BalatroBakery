@@ -223,6 +223,20 @@ local function equip(key)
             }) } }
     end)
 end
+Balatest.TestPlay {
+    name = 'ruler_charm',
+    category = { 'blinds', 'ruler' },
+
+    blind = 'bl_Bakery_Samekh',
+    no_auto_start = true,
+    execute = function()
+        equip 'BakeryCharm_Bakery_Coin'
+        Balatest.start_round()
+    end,
+    assert = function()
+        Balatest.assert(not G.Bakery_charm_area.cards[1].debuff)
+    end
+}
 
 Balatest.TestPlay {
     name = 'stoic_coin',

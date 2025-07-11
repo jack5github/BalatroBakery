@@ -199,6 +199,7 @@ Bakery_API.credit(SMODS.Blind {
         return
             not G.GAME.blind.disabled and
             card.area ~= G.jokers and
+            card.area ~= G.Bakery_charm_area and
             (SMODS.has_no_rank(card) or SMODS.has_no_suit(card))
     end,
     -- Only appears if 1 in 6 cards have no rank or suit
