@@ -562,6 +562,10 @@ SMODS.PokerHand:take_ownership("Five of a Kind", {
             and next(get_X_same(5, scoring_hand, true)) then
             return "Bakery_SixOfAKind"
         end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree'
+            and #all_suits(3, scoring_hand) >= 1 and #all_suits(2, scoring_hand) >= 2 then
+            return "Bakery_FullFive"
+        end
         if raw_five_of_a_kind_modify_display_text then
             return raw_five_of_a_kind_modify_display_text()
         end
@@ -574,6 +578,10 @@ SMODS.PokerHand:take_ownership("Flush Five", {
         if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_AnaglyphLens'
             and next(get_X_same(5, scoring_hand, true)) then
             return "Bakery_FlushSix"
+        end
+        if G.GAME.Bakery_charm == 'BakeryCharm_Bakery_Pedigree'
+            and #all_suits(3, scoring_hand) >= 1 and #all_suits(2, scoring_hand) >= 2 then
+            return "Bakery_FullFlushFive"
         end
         if raw_flush_five_modify_display_text then
             return raw_flush_five_modify_display_text()

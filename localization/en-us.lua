@@ -501,6 +501,8 @@ return {
             Bakery_StraightHouse = "Harem",             -- Straight & Full House
             Bakery_StraightFlushHouse = "Flush Harem",  -- Straight Flush & Flush House
             Bakery_RoyalFlushHouse = "Royal Harem",     -- Royal Flush & Flush House
+            Bakery_FullFive = "Full Five",              -- Full House & Five of a Kind
+            Bakery_FullFlushFive = "Full Flush Five",   -- Full House & Flush Five
             Bakery_SixOfAKind = "Six Of A Kind",        -- Five of a Kind & 6 cards
             Bakery_FlushSix = "Flush Six",              -- Flush & Five of a Kind & 6 cards
             Bakery_ThreePair = "Three Pair",            -- 3X Pair

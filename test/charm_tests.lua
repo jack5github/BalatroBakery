@@ -427,6 +427,36 @@ Balatest.TestPlay {
         Balatest.assert(hand_name == 'Bakery_RoyalFlushHouse')
     end
 }
+Balatest.TestPlay {
+    name = 'pedigree_full_five',
+    category = { 'charms', 'pedigree' },
+
+    deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'H' }, { r = '2', s = 'H' }, { r = '2', s = 'H' } } },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Pedigree'
+        Balatest.highlight { '2S', '2S', '2H', '2H', '2H' }
+    end,
+    assert = function()
+        local _, _, _, scoring_hand, hand_name = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        Balatest.assert_eq(#scoring_hand, 5)
+        Balatest.assert(hand_name == 'Bakery_FullFive')
+    end
+}
+Balatest.TestPlay {
+    name = 'pedigree_full_flush_five',
+    category = { 'charms', 'pedigree' },
+
+    deck = { cards = { { r = '2', s = 'S' }, { r = '2', s = 'S' }, { r = '2', s = 'H', e = 'm_wild' }, { r = '2', s = 'H', e = 'm_wild' }, { r = '2', s = 'H', e = 'm_wild' } } },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Pedigree'
+        Balatest.highlight { '2S', '2S', '2H', '2H', '2H' }
+    end,
+    assert = function()
+        local _, _, _, scoring_hand, hand_name = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+        Balatest.assert_eq(#scoring_hand, 5)
+        Balatest.assert(hand_name == 'Bakery_FullFlushFive')
+    end
+}
 --#endregion
 
 --#region Epitaph
