@@ -1150,3 +1150,34 @@ Balatest.TestPlay {
     end
 }
 --#endregion
+
+--#region Oops! All 20s
+Balatest.TestPlay {
+    name = 'oops_all_20s_business_card',
+    category = { 'charms', 'oops_all_20s' },
+
+    jokers = { 'j_business' },
+    dollars = 8,
+    execute = function()
+        equip 'BakeryCharm_Bakery_OopsAll20s'
+        Balatest.play_hand { 'KS', 'QS', 'JS', 'AS', 'TS' }
+    end,
+    assert = function()
+        Balatest.assert_eq(G.GAME.dollars, 6)
+    end
+}
+Balatest.TestPlay {
+    name = 'oops_all_20s_6_banana',
+    category = { 'charms', 'oops_all_20s' },
+
+    jokers = { 'j_oops', 'j_gros_michel', 'j_gros_michel', 'j_gros_michel', 'j_gros_michel' },
+    dollars = 8,
+    execute = function()
+        equip 'BakeryCharm_Bakery_OopsAll20s'
+        Balatest.end_round()
+    end,
+    assert = function()
+        Balatest.assert_eq(#G.jokers.cards, 1)
+    end
+}
+--#endregion

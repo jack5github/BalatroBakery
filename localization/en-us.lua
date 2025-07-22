@@ -213,7 +213,7 @@ return {
             },
             tag_Bakery_TopTag = {
                 name = "Top Tag",
-                text = { "Gives {C:money}$1{} per", "card in your deck", "{C:inactive}(Will give {C:money}$#1#{C:inactive})" }
+                text = { "Gives {C:money}50¢{} per", "card in your deck", "{C:inactive}(Will give {C:money}$#1#{C:inactive})" }
             },
             tag_Bakery_BottomTag = {
                 name = "Bottom Tag",
@@ -440,6 +440,10 @@ return {
                 name = 'Cogwheel',
                 text = { "{C:attention}-#1#{} Antes,", "{C:attention}-#2#{} card in shop" },
                 unlock = { 'Clear Ante {C:attention}#1#' }
+            },
+            BakeryCharm_Bakery_OopsAll20s = {
+                name = 'Oops! All 20s',
+                text = { 'Triples all {C:attention}listed', '{C:green,E:1,S:1.1}probabilities', '{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}3 in 3{C:inactive})' }
             }
             -- KEEP_LITE
         },

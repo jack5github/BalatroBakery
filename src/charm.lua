@@ -1098,6 +1098,17 @@ Bakery_API.Charm {
     end
 }
 
+Bakery_API.Charm {
+    key = 'OopsAll20s',
+    pos = { x = 2, y = 3 },
+    atlas = 'Charms',
+    calculate = function(self, card, context)
+        if context.mod_probability then
+            return { numerator = context.numerator * 3 }
+        end
+    end,
+}
+
 if next(SMODS.find_mod "RevosVault") then
     Bakery_API.Charm {
         key = "PrintError",
