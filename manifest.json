@@ -2,7 +2,7 @@
   "id": "Bakery",
   "name": "Bakery",
   "author": ["BakersDozenBagels"],
-  "description": "Some miscellaneous additions.",
+  "description": "Some miscellaneous additions:\n\nAdds Charms, Tags, Jokers, Blinds, and much more.",
   "prefix": "Bakery",
   "main_file": "src/main.lua",
   "priority": 0,
