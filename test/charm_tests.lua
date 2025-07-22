@@ -1181,3 +1181,24 @@ Balatest.TestPlay {
     end
 }
 --#endregion
+
+--#region Fortuna
+Balatest.TestPlay {
+    name = 'fortuna',
+    category = { 'charms', 'fortuna' },
+
+    jokers = { 'j_oops', 'j_oops', 'j_joker', 'j_joker', 'j_joker' },
+    consumeables = { 'c_wheel_of_fortune', 'c_wheel_of_fortune', 'c_wheel_of_fortune', 'c_wheel_of_fortune', 'c_wheel_of_fortune' },
+    execute = function()
+        equip 'BakeryCharm_Bakery_Fortuna'
+        for i = 1, 5 do
+            Balatest.use(G.consumeables.cards[i])
+        end
+    end,
+    assert = function()
+        for i = 1, 5 do
+            Balatest.assert(G.jokers.cards[i].edition.key == 'e_polychrome')
+        end
+    end
+}
+--#endregion

@@ -1109,6 +1109,34 @@ Bakery_API.Charm {
     end,
 }
 
+Bakery_API.Charm {
+    key = 'Fortuna',
+    pos = { x = 3, y = 3 },
+    atlas = 'Charms',
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.c_wheel_of_fortune
+        return {
+            vars = {
+                localize {
+                    type = 'name_text',
+                    key = 'c_wheel_of_fortune',
+                    set = "Tarot"
+                },
+                localize {
+                    type = 'name_text',
+                    key = 'e_foil',
+                    set = "Edition"
+                },
+                localize {
+                    type = 'name_text',
+                    key = 'e_holo',
+                    set = "Edition"
+                },
+            }
+        }
+    end
+}
+
 if next(SMODS.find_mod "RevosVault") then
     Bakery_API.Charm {
         key = "PrintError",

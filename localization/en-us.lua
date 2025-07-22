@@ -444,6 +444,10 @@ return {
             BakeryCharm_Bakery_OopsAll20s = {
                 name = 'Oops! All 20s',
                 text = { 'Triples all {C:attention}listed', '{C:green,E:1,S:1.1}probabilities', '{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}3 in 3{C:inactive})' }
+            },
+            BakeryCharm_Bakery_Fortuna = {
+                name = 'Fortuna',
+                text = { '{C:tarot}#1#{} never', 'adds {C:dark_edition}#2#{} or {C:dark_edition}#3#' }
             }
             -- KEEP_LITE
         },
